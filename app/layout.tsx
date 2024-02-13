@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
 import { ThemeContext } from '@/context'
 import { Header } from '@/components'
 import '@/styles/globals.css'
+import { Suspense } from 'react'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
 	title: 'Pierre Fournier - Développeur freelance à Toulouse',
@@ -20,7 +21,10 @@ export default function RootLayout({
 	return (
 		<html lang='fr'>
 			<body>
-				<Header />
+				<ThemeContext>
+					<Header />
+					<Suspense>{children}</Suspense>
+				</ThemeContext>
 			</body>
 		</html>
 	)
