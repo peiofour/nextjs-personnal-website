@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 // import { Inter } from 'next/font/google'
 import { ThemeContext } from '@/context'
-import { Header } from '@/components'
+import { Footer, Header } from '@/components'
 import '@/styles/globals.css'
 import { Suspense } from 'react'
 
@@ -24,6 +24,7 @@ export default function RootLayout({
 				<ThemeContext>
 					<Header />
 					<Suspense>{children}</Suspense>
+					<Footer />
 				</ThemeContext>
 			</body>
 		</html>
