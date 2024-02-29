@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { useInView } from 'framer-motion'
 
 export default function Page() {
 	const [count, setCount] = useState(0)
@@ -13,7 +12,6 @@ export default function Page() {
 		'Je construis des applications mobile avec React Native',
 	])
 	const subtitleRef = useRef<HTMLHeadingElement>(null)
-	const isInView = useInView(subtitleRef, { once: true })
 
 	useEffect(() => {
 		let interval = setInterval(() => {
@@ -64,9 +62,8 @@ export default function Page() {
 function TextElement({ element }: Readonly<{ element: string }>) {
 	const firstWord = element.split(' ').at(0)
 	const secondWord = <b>{element.split(' ').at(1)}</b>
-	const rest = element.split(' ').slice(1).join(' ')
+	const rest = element.split(' ').slice(2).join(' ')
 	const ref = useRef<HTMLSpanElement>(null)
-	// const isInView = useInView(ref, { once: true })
 
 	return (
 		<span
