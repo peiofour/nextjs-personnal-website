@@ -1,12 +1,17 @@
 import type { Metadata } from 'next'
-// import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import React from 'react'
 import { ThemeContext } from '@/context'
 import { Footer, Header } from '@/components'
 import '@/styles/globals.css'
 import { Suspense } from 'react'
 
-// const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({
+	subsets: ['latin'],
+	display: 'swap',
+	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+	variable: '--font-poppins'
+})
 
 export const metadata: Metadata = {
 	title: 'Pierre Fournier - Développeur freelance à Toulouse',
@@ -17,7 +22,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang="fr">
-		<body>
+		<body className={poppins.className}>
 		<ThemeContext>
 			<Header />
 			<Suspense>{children}</Suspense>
