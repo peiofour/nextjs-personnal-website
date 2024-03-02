@@ -1,6 +1,6 @@
 'use client'
 
-import { About, Head, Stack } from './sections'
+import { About, Companies, Head, Stack } from './sections'
 
 export default function Page() {
 	return (
@@ -8,6 +8,7 @@ export default function Page() {
 			<Head />
 			<About />
 			<Stack />
+			<Companies />
 		</div>
 	)
 }
