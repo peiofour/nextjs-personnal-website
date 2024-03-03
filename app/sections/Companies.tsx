@@ -14,10 +14,10 @@ import grandsespaces from '@/public/companies/grandsespaces.svg'
 
 export function Companies() {
 	return (
-		<div className="container flex flex-col gap-10 pt-10 pb-20">
-			<div className="text-center flex flex-col gap-3">
-				<h1 className="font-bold text-3xl">{texts[0]}</h1>
-				<h2 className="text-lg">{texts[1]}</h2>
+		<div className='container flex flex-col gap-10 pt-10 pb-20'>
+			<div className='text-center flex flex-col gap-3'>
+				<h1 className='font-bold text-3xl'>{texts[0]}</h1>
+				<h2 className='text-lg'>{texts[1]}</h2>
 			</div>
 			<div className='flex flex-wrap gap-20'>
 				<CompanyIcon src={loungeup} alt='LoungeUp' />
@@ -36,13 +36,17 @@ export function Companies() {
 
 const texts = [
 	"Ils m'ont fait confiance",
-	"Je suis fier d'avoir collaborer avec ces entreprises"
+	"Je suis fier d'avoir collaborer avec ces entreprises",
 ]
 
-function CompanyIcon({ src, alt, width = 200 }: Readonly<{ src: string, alt: string, width?: number }>) {
+function CompanyIcon({
+	src,
+	alt,
+	width = 200,
+}: Readonly<{ src: string; alt: string; width?: number }>) {
 	return (
-		<div className="mx-auto my-auto">
-			<Image loading="lazy" src={src} alt={alt} width={width} />
+		<div className='mx-auto my-auto'>
+			<Image loading='lazy' src={src} alt={alt} width={width} />
 		</div>
 	)
 }

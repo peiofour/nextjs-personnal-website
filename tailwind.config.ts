@@ -15,14 +15,14 @@ const config: Config = {
 					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 			},
 			colors: {
-				'primary': '#335AB5',
-				'secondary': '#F85188',
-				'tertiary': '#F5F5F5',
-				'stroke': '#E6E6E6'
+				primary: '#335AB5',
+				secondary: '#F85188',
+				tertiary: '#F5F5F5',
+				stroke: '#E6E6E6',
 			},
 			boxShadow: {
-				'card': '0 18px 17px 0 rgba(0, 0, 0, 0.07)',
-			}
+				card: '0 18px 17px 0 rgba(0, 0, 0, 0.07)',
+			},
 		},
 	},
 	plugins: [],

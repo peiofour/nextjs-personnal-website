@@ -25,15 +25,15 @@ export function Head() {
 	}, [count, subtitle])
 
 	return (
-		<div className="container flex flex-col items-center justify-between p-24">
-			<div className="container max-w-4xl text-center space-y-6">
-				<h1 className="text-5xl leading-[72px] font-bold">
-					Je suis <span className="text-primary">Pierre</span>, un développeur logiciel
-					freelance <span className="text-secondary">passionné</span>
+		<div className='container flex flex-col items-center justify-between p-24'>
+			<div className='container max-w-4xl text-center space-y-6'>
+				<h1 className='text-5xl leading-[72px] font-bold'>
+					Je suis <span className='text-primary'>Pierre</span>, un développeur
+					logiciel freelance <span className='text-secondary'>passionné</span>
 				</h1>
-				<h2 className="text-xl relative overflow-hidden h-[28px]">
+				<h2 className='text-xl relative overflow-hidden h-[28px]'>
 					<span
-						className="absolute flex flex-col transition-all duration-500 ease-in-expo left-0 right-0"
+						className='absolute flex flex-col transition-all duration-500 ease-in-expo left-0 right-0'
 						style={{
 							top: `-${count * 28}px`,
 						}}

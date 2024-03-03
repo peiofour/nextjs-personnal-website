@@ -10,7 +10,7 @@ const poppins = Poppins({
 	subsets: ['latin'],
 	display: 'swap',
 	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-	variable: '--font-poppins'
+	variable: '--font-poppins',
 })
 
 export const metadata: Metadata = {
@@ -19,16 +19,18 @@ export const metadata: Metadata = {
 		'Je suis développeur freelance, je vis à Toulouse dans le sud de la France. Ici je publie des articles de blog sur la tech, les startups, la politique, le numérique en France et dans le monde.',
 }
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+	children,
+}: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html lang="fr">
-		<body className={poppins.className}>
-		<ThemeContext>
-			<Header />
-			<Suspense>{children}</Suspense>
-			<Footer />
-		</ThemeContext>
-		</body>
+		<html lang='fr'>
+			<body className={poppins.className}>
+				<ThemeContext>
+					<Header />
+					<Suspense>{children}</Suspense>
+					<Footer />
+				</ThemeContext>
+			</body>
 		</html>
 	)
 }
