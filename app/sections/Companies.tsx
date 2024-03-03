@@ -16,8 +16,8 @@ export function Companies() {
 	return (
 		<div className="container flex flex-col gap-10 pt-10 pb-20">
 			<div className="text-center flex flex-col gap-3">
-				<h1 className="font-bold text-3xl">Ils m'ont fait confiance</h1>
-				<h2 className="text-lg">Je suis fier d'avoir collaborer avec ces entreprises</h2>
+				<h1 className="font-bold text-3xl">{texts[0]}</h1>
+				<h2 className="text-lg">{texts[1]}</h2>
 			</div>
 			<div className='flex flex-wrap gap-20'>
 				<CompanyIcon src={loungeup} alt='LoungeUp' />
@@ -33,6 +33,11 @@ export function Companies() {
 		</div>
 	)
 }
+
+const texts = [
+	"Ils m'ont fait confiance",
+	"Je suis fier d'avoir collaborer avec ces entreprises"
+]
 
 function CompanyIcon({ src, alt, width = 200 }: Readonly<{ src: string, alt: string, width?: number }>) {
 	return (
