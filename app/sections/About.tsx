@@ -10,12 +10,12 @@ export function About() {
 				src={undraw}
 				alt="Illustration d'un homme fier"
 				width={500}
-				className={'mx-auto -mb-32'}
+				className='px-10 lg:px-0 mx-auto -mb-32'
 			/>
 			<div className='bg-primary py-28'>
 				<div className='container max-w-4xl text-white text-center flex flex-col gap-5'>
 					<h1 className='font-bold text-3xl'>Bonjour,</h1>
-					<div className='text-xl font-normal flex flex-col gap-4'>
+					<div className='text-lg lg:text-xl font-normal flex flex-col gap-4'>
 						{text.map((paragraph, index) => (
 							<p key={index}>{paragraph}</p>
 						))}

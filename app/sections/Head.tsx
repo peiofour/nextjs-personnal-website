@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useIsMobile } from '@/hooks'
 
 export function Head() {
 	const [count, setCount] = useState(0)
@@ -24,19 +25,19 @@ export function Head() {
 		return () => clearInterval(interval)
 	}, [count, subtitle])
 
+	const isMobile = useIsMobile()
+
 	return (
-		<div className='container flex flex-col items-center justify-between p-24'>
-			<div className='container max-w-4xl text-center space-y-6'>
-				<h1 className='text-5xl leading-[72px] font-bold'>
+		<div className='container flex flex-col items-center justify-between py-20 lg:p-24'>
+			<div className='container lg:max-w-4xl text-center space-y-6'>
+				<h1 className='text-3xl lg:text-5xl lg:leading-[72px] font-bold'>
 					Je suis <span className='text-primary'>Pierre</span>, un développeur
 					logiciel freelance <span className='text-secondary'>passionné</span>
 				</h1>
-				<h2 className='text-xl relative overflow-hidden h-[28px]'>
+				<h2 className='text-lg lg:text-xl relative overflow-hidden h-[56px] lg:h-[28px]'>
 					<span
 						className='absolute flex flex-col transition-all duration-500 ease-in-expo left-0 right-0'
-						style={{
-							top: `-${count * 28}px`,
-						}}
+						style={{ top: `-${count * (isMobile ? 56 : 28)}px` }}
 					>
 						{subtitle.map((element, index) => (
 							<TextElement key={index} element={element} />

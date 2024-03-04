@@ -11,15 +11,16 @@ import henritrip from '@/public/companies/henritrip.svg'
 import safary from '@/public/companies/safary.svg'
 import grandlitier from '@/public/companies/grandlitier.svg'
 import grandsespaces from '@/public/companies/grandsespaces.svg'
+import { useIsMobile } from '@/hooks'
 
 export function Companies() {
 	return (
 		<div className='container flex flex-col gap-10 pt-10 pb-20'>
 			<div className='text-center flex flex-col gap-3'>
-				<h1 className='font-bold text-3xl'>{texts[0]}</h1>
+				<h1 className='font-bold text-2xl lg:text-3xl'>{texts[0]}</h1>
 				<h2 className='text-lg'>{texts[1]}</h2>
 			</div>
-			<div className='flex flex-wrap gap-20'>
+			<div className='flex flex-wrap gap-10 lg:gap-20'>
 				<CompanyIcon src={loungeup} alt='LoungeUp' />
 				<CompanyIcon src={peoplevox} alt='PeopleVox' />
 				<CompanyIcon src={feel} alt='Feel' width={100} />
@@ -44,9 +45,10 @@ function CompanyIcon({
 	alt,
 	width = 200,
 }: Readonly<{ src: string; alt: string; width?: number }>) {
+	const isMobile = useIsMobile()
 	return (
 		<div className='mx-auto my-auto'>
-			<Image loading='lazy' src={src} alt={alt} width={width} />
+			<Image loading='lazy' src={src} alt={alt} width={isMobile ? width/1.5 : width} />
 		</div>
 	)
 }
