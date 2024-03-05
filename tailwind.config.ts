@@ -22,6 +22,7 @@ const config: Config = {
 			},
 			boxShadow: {
 				card: '0 18px 17px 0 rgba(0, 0, 0, 0.07)',
+				'card-hover': '0 18px 17px 0 rgba(0, 0, 0, 0.1)',
 			},
 		},
 	},
