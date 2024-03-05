@@ -1,6 +1,6 @@
 'use client'
 
-import { About, Companies, Head, Stack, Testimonials } from './sections'
+import { About, Collaborate, Companies, Head, Stack, Testimonials } from './sections'
 
 export default function Page() {
 	return (
@@ -10,6 +10,7 @@ export default function Page() {
 			<Stack />
 			<Companies />
 			<Testimonials />
+			<Collaborate />
 		</div>
 	)
 }

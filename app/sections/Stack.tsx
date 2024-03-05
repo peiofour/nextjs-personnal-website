@@ -65,8 +65,8 @@ export function Stack() {
 							<p>AWS, Google Cloud, Azure, OVH, Scaleway</p>
 						</div>
 						<div className='flex-1'>
-							<h3 className='text-primary font-semibold'>Style :</h3>
-							<p>CSS3, Tailwind CSS, Sass, styled-components</p>
+							<h3 className='text-primary font-semibold'>PaaS :</h3>
+							<p>Heroku, Vercel, Netlify, Scalingo, DigitalOcean</p>
 						</div>
 					</div>
 				</div>
