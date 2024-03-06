@@ -4,9 +4,12 @@ import { CardProps, Card } from '@/components'
 
 export default function Page() {
 	return (
-		<div className='min-h-screen container'>
-			<h1 className='text-3xl font-bold mt-5'>Derniers articles</h1>
-
+		<div className='min-h-screen container py-5'>
+			<h1 className='text-3xl font-bold pb-3'>Derniers articles</h1>
+			<h2 className='text-lg max-w-xl'>
+				Je publie sur ce blog des articles sur le web, sur les nouvelles
+				technologies, sur les startups et sur l’entreprenariat.
+			</h2>
 			<div className='mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8'>
 				{testArticles.length > 0 ? (
 					testArticles.map((article, index) => (
@@ -30,7 +33,7 @@ const testArticles: CardProps[] = [
 		date: '12 février 2021',
 		image: 'https://via.placeholder.com/400x210',
 		alt: 'placeholder',
-		link: '/blog/1',
+		slug: 'comment-j-ai-cree-mon-entreprise-a-22-ans',
 	},
 	{
 		title: 'Les nouvelles technologies en 2021',
@@ -39,7 +42,7 @@ const testArticles: CardProps[] = [
 		date: '12 février 2021',
 		image: 'https://via.placeholder.com/400x210',
 		alt: 'placeholder',
-		link: '/blog/2',
+		slug: 'les-nouvelles-technologies-en-2021',
 	},
 	{
 		title: 'Comment j’ai créé mon entreprise à 22 ans',
@@ -48,6 +51,6 @@ const testArticles: CardProps[] = [
 		date: '12 février 2021',
 		image: 'https://via.placeholder.com/400x210',
 		alt: 'placeholder',
-		link: '/blog/3',
+		slug: 'comment-j-ai-cree-mon-entreprise-a-22-ans',
 	},
 ]

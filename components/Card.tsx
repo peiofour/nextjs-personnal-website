@@ -8,18 +8,25 @@ export interface CardProps {
 	description: string
 	image: string
 	alt: string
-	link: string
+	slug: string
 	date: string
 }
 
-export function Card({ title, description, alt, image, link, date }: CardProps) {
+export function Card({
+	title,
+	description,
+	alt,
+	image,
+	slug,
+	date,
+}: CardProps) {
 	const router = useRouter()
 	return (
 		<div
 			className='flex flex-col gap-4 h-[450px] max-w-[400px] shadow-card rounded-lg
 			bg-white cursor-pointer transition-all duration-200 ease-in-out
 			hover:shadow-card-hover'
-			onClick={() => router.push(link)}
+			onClick={() => router.push(`/blog/${slug}`)}
 		>
 			<div className='relative h-[210px] w-full bg-gray-300 rounded-t-lg overflow-hidden'>
 				<Image src={image} alt={alt} layout='fill' objectFit='cover' />

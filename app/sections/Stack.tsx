@@ -1,7 +1,6 @@
 'use client'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCode, faServer, faCloud } from '@fortawesome/free-solid-svg-icons'
+import { FaCode, FaServer, FaCloud } from 'react-icons/fa6'
 
 export function Stack() {
 	return (
@@ -9,7 +8,7 @@ export function Stack() {
 			<div className='rounded-xl shadow-card bg-white flex flex-col mx-auto max-w-xl lg:max-w-none lg:flex-row text-center divide-stroke divide-y lg:divide-y-0 lg:divide-x'>
 				<div className='flex-1 flex flex-col gap-8 py-10 '>
 					<span className='rounded-full size-20 bg-secondary text-white mx-auto flex items-center'>
-						<FontAwesomeIcon icon={faCode} size='xl' className='mx-auto' />
+						<FaCode size='2em' className='mx-auto' />
 					</span>
 					<h2 className='font-bold text-2xl'>Développeur front-end</h2>
 					<div className='text-lg grow flex flex-col gap-4 px-10'>
@@ -29,7 +28,7 @@ export function Stack() {
 				</div>
 				<div className='flex-1 flex flex-col gap-8 py-10'>
 					<span className='rounded-full size-20 bg-secondary text-white mx-auto flex items-center'>
-						<FontAwesomeIcon icon={faServer} size='xl' className='mx-auto' />
+						<FaServer size='2em' className='mx-auto' />
 					</span>
 					<h2 className='font-bold text-2xl'>Développeur back-end</h2>
 					<div className='text-lg grow flex flex-col gap-4 px-10'>
@@ -49,7 +48,7 @@ export function Stack() {
 				</div>
 				<div className='flex-1 flex flex-col gap-8 py-10'>
 					<span className='rounded-full size-20 bg-secondary text-white mx-auto flex items-center'>
-						<FontAwesomeIcon icon={faCloud} size='xl' className='mx-auto' />
+						<FaCloud size='2em' className='mx-auto' />
 					</span>
 					<h2 className='font-bold text-2xl'>DevOps / Cloud</h2>
 					<div className='text-lg grow flex flex-col gap-4 px-10'>
