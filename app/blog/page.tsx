@@ -1,6 +1,4 @@
-'use client'
-
-import { CardProps, Card } from '@/components'
+import { CardProps, Card } from '@/app/components'
 
 export default function Page() {
 	return (

@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-
 import loungeup from '@/public/companies/loungeup.svg'
 import peoplevox from '@/public/companies/peoplevox.svg'
 import w2p from '@/public/companies/w2pdigital.svg'
@@ -48,7 +47,12 @@ function CompanyIcon({
 	const isMobile = useIsMobile()
 	return (
 		<div className='mx-auto my-auto'>
-			<Image loading='lazy' src={src} alt={alt} width={isMobile ? width/1.5 : width} />
+			<Image
+				src={src}
+				alt={alt}
+				width={isMobile ? width / 1.5 : width}
+				height={isMobile ? width / 1.5 : width}
+			/>
 		</div>
 	)
 }

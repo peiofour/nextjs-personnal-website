@@ -2,9 +2,8 @@ import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import React from 'react'
 import { ThemeContext } from '@/context'
-import { Footer, Header } from '@/components'
+import { Footer, Header } from '@/app/components'
 import '@/styles/globals.css'
-import { Suspense } from 'react'
 
 const poppins = Poppins({
 	subsets: ['latin'],
@@ -27,7 +26,7 @@ export default function RootLayout({
 			<body className={poppins.className}>
 				<ThemeContext>
 					<Header />
-					<Suspense>{children}</Suspense>
+					{children}
 					<Footer />
 				</ThemeContext>
 			</body>

@@ -29,7 +29,7 @@ export function Card({
 			onClick={() => router.push(`/blog/${slug}`)}
 		>
 			<div className='relative h-[210px] w-full bg-gray-300 rounded-t-lg overflow-hidden'>
-				<Image src={image} alt={alt} layout='fill' objectFit='cover' />
+				<Image width={400} height={210} src={image} alt={alt}/>
 			</div>
 			<div className='pl-4 pr-8'>
 				<h3 className='text-xl font-bold pb-1'>{title}</h3>

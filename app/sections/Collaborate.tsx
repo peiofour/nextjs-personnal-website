@@ -1,6 +1,4 @@
-'use client'
-
-import { Button } from '@/components'
+import { Button } from '@/app/components'
 
 export function Collaborate() {
 	return (

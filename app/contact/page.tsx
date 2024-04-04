@@ -1,4 +1,4 @@
-'use client'
+import Link from "next/link"
 
 export default function Page() {
 	return (
@@ -12,39 +12,39 @@ export default function Page() {
 			<div className='flex flex-col gap-3'>
 				<h3 className='text-xl font-medium pb-3'>
 					Email :{' '}
-					<a href='mailto:contact@pierrefournier.dev' className='text-blue-500'>
+					<Link href='mailto:contact@pierrefournier.dev' className='text-blue-500'>
 						contact@pierrefournier.dev
-					</a>
+					</Link>
 				</h3>
 				<h3 className='text-xl font-medium pb-3'>
-					<a
+					<Link
 						href='https://www.github.com/peiofour'
 						target='_blank'
 						rel='noreferrer'
 						className='text-blue-500'
 					>
 						GitHub
-					</a>
+					</Link>
 				</h3>
 				<h3 className='text-xl font-medium pb-3'>
-					<a
+					<Link
 						href='https://www.linkedin.com/in/pierrefournier1'
 						target='_blank'
 						rel='noreferrer'
 						className='text-blue-500'
 					>
 						LinkedIn
-					</a>
+					</Link>
 				</h3>
 				<h3 className='text-xl font-medium pb-3'>
-					<a
+					<Link
 						href='https://www.malt.fr/profile/pierrefournier2'
 						target='_blank'
 						rel='noreferrer'
 						className='text-blue-500'
 					>
 						Malt
-					</a>
+					</Link>
 				</h3>
 			</div>
 		</div>

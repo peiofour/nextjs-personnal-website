@@ -1,14 +1,12 @@
 ---
 title: 'Devenir incollable sur les hooks en React'
-description: 'Les hooks sont une fonctionnalité de React qui permet de manipuler les états et les cycles de vie des fonctions dans les composants fonctionnels. Découvrez comment utiliser les principaux et comment en créer de nouveaux.'
+description: 'Les hooks sont une fonctionnalité de React qui permet de manipuler les états et les cycles de vie des fonctions dans les composants fonctionnels. Je vous apprends ici à les utiliser.'
 slug: "devenir-incollable-sur-les-hooks-en-react"
 date: "08/12/2023"
 keywords: ["tutoriel", "react", "reactjs", "react.js", "hooks", "useState", "useEffect", "useContext", "useReducer", "useCallback", "useMemo", "useRef", "Pierre Fournier", "tutoriel", "french", "fr", "français"]
 image: "https://res.cloudinary.com/pierrefournier-dev/image/upload/c_scale,h_531,q_100/v1691846892/react-hooksbis_pjr4fu.webp"
 author: "Pierre Fournier"
 ---
-
-Les hooks sont une fonctionnalité de React qui permet de manipuler les états et les cycles de vie des fonctions dans les composants fonctionnels. Je vous apprend ici à les utiliser.
 
 ## Introduction
 

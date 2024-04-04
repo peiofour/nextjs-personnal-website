@@ -1,6 +1,4 @@
-'use client'
-
-import { Button, Card, CardProps } from '@/components'
+import { Button, Card, CardProps } from '@/app/components'
 
 export function Posts() {
 	return (

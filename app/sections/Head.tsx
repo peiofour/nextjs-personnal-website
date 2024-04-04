@@ -5,7 +5,7 @@ import { useIsMobile } from '@/hooks'
 
 export function Head() {
 	const [count, setCount] = useState(0)
-	const [subtitle] = useState([
+	const [subtitle,] = useState([
 		'Je développe des applications web performantes avec Next.js',
 		'Je conçois des interfaces modernes avec React',
 		'Je crée des architectures robustes et scalables avec Ruby on Rails',
@@ -31,7 +31,7 @@ export function Head() {
 		<div className='container flex flex-col items-center justify-between py-20 lg:p-24'>
 			<div className='container lg:max-w-4xl text-center space-y-6'>
 				<h1 className='text-3xl lg:text-5xl lg:leading-[72px] font-bold'>
-					Je suis <span className='text-primary'>Pierre</span>, un développeur
+					<span className='text-primary'>Pierre</span>, un développeur
 					logiciel freelance <span className='text-secondary'>passionné</span>
 				</h1>
 				<h2 className='text-lg lg:text-xl relative overflow-hidden h-[56px] lg:h-[28px]'>

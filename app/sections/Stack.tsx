@@ -1,5 +1,3 @@
-'use client'
-
 import { FaCode, FaServer, FaCloud } from 'react-icons/fa6'
 
 export function Stack() {

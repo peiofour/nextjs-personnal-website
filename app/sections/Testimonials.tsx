@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import peoplevoxicon from '@/public/companies/peoplevox.svg'
 import loungeupicon from '@/public/companies/loungeup.svg'
 import { useIsMobile } from '@/hooks'
@@ -57,7 +57,13 @@ interface CarousselItemProps {
 }
 
 function CarousselItem(testimonial: CarousselItemProps) {
-	const isMobile = useIsMobile()
+	const [isMobile, setIsMobile] = useState<boolean | undefined>(undefined)
+	const isMobileFromHook = useIsMobile()
+
+	useEffect(() => {
+		setIsMobile(isMobileFromHook)
+	}, [isMobileFromHook])
+
 	return (
 		<div className='flex flex-col items-center text-center gap-6 lg:gap-10 float-left w-[50%] lg:mx-5'>
 			<Image
@@ -66,7 +72,9 @@ function CarousselItem(testimonial: CarousselItemProps) {
 				alt={testimonial.alt}
 				width={isMobile ? 200 : 230}
 			/>
-			<p className='text-lg lg:text-xl font-normal h-full'>{testimonial.text}</p>
+			<p className='text-lg lg:text-xl font-normal h-full'>
+				{testimonial.text}
+			</p>
 			<div>
 				<h1 className='font-bold'>{testimonial.name}</h1>
 				<h2>{testimonial.job}</h2>
