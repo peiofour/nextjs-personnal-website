@@ -8,7 +8,9 @@ export function Footer() {
 		<footer className='bg-primary h-72 py-20'>
 			<div className='container flex flex-col gap-8'>
 				<div className='mx-auto'>
-					<Logo variant='white' size='lg' />
+					<Link href='/'>
+						<Logo variant='white' size='lg' />
+					</Link>
 				</div>
 				<div className='flex gap-3 mx-auto'>
 					<Link
