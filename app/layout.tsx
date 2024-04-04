@@ -4,6 +4,8 @@ import React from 'react'
 import { ThemeContext } from '@/context'
 import { Footer, Header } from '@/app/components'
 import '@/styles/globals.css'
+import { Suspense } from 'react'
+import Loading from './loading'
 
 const poppins = Poppins({
 	subsets: ['latin'],
@@ -26,7 +28,9 @@ export default function RootLayout({
 			<body className={poppins.className}>
 				<ThemeContext>
 					<Header />
-					{children}
+					<Suspense fallback={<Loading />}>
+            {children}
+          </Suspense>
 					<Footer />
 				</ThemeContext>
 			</body>
