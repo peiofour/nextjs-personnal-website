@@ -1,13 +1,13 @@
-import { parseISO, intlFormat } from 'date-fns'
+import { parseISO, format } from 'date-fns'
+import { fr } from 'date-fns/locale'
 
 interface Props {
-	date: string
+  date: string
 }
 
 const DateFormatter = ({ date }: Props) => {
-	const ISODate = parseISO(date)
-	const frDate = intlFormat(ISODate, { dateStyle: 'full' }, { locale: 'fr-FR' })
-	return <time dateTime={date}>{frDate}</time>
+  const frDate = format(date, 'dd MMMM yyyy', { locale: fr })
+  return <time dateTime={date}>{frDate}</time>
 }
 
 export default DateFormatter

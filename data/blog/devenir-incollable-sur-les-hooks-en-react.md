@@ -4,7 +4,7 @@ description: 'Les hooks sont une fonctionnalité de React qui permet de manipule
 slug: "devenir-incollable-sur-les-hooks-en-react"
 date: "08/12/2023"
 keywords: ["tutoriel", "react", "reactjs", "react.js", "hooks", "useState", "useEffect", "useContext", "useReducer", "useCallback", "useMemo", "useRef", "Pierre Fournier", "tutoriel", "french", "fr", "français"]
-image: "https://res.cloudinary.com/pierrefournier-dev/image/upload/c_scale,h_531,q_100/v1691846892/react-hooksbis_pjr4fu.webp"
+coverImage: "https://res.cloudinary.com/pierrefournier-dev/image/upload/c_scale,h_800,q_100/v1691846892/react-hooksbis_pjr4fu.webp"
 author: "Pierre Fournier"
 ---
 

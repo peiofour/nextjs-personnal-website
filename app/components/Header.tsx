@@ -11,7 +11,7 @@ export function Header() {
 					</Link>
 				</div>
 				<div className='lg:flex hidden lg:gap-10 gap-3 text-lg font-normal no-underline'>
-					<Link href='/blog'>Blog</Link>
+					<Link href='/projects'>Projets</Link>
 					<Link href='/contact'>Contact</Link>
 				</div>
 			</div>
