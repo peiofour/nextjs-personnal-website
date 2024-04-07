@@ -3,7 +3,7 @@ import { Logo } from './Logo'
 
 export function Header() {
 	return (
-		<header className='py-6'>
+		<header className='py-6 flex-initial'>
 			<div className='container flex flex-row justify-between'>
 				<div className='flex items-center'>
 					<Link href='/'>

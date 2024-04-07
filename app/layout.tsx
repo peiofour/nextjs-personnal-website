@@ -27,11 +27,13 @@ export default function RootLayout({
 		<html lang='fr'>
 			<body className={poppins.className}>
 				<ThemeContext>
-					<Header />
-					<Suspense fallback={<Loading />}>
-            {children}
-          </Suspense>
-					<Footer />
+					<main className='min-h-screen flex flex-col'>
+						<Header />
+            <div className='flex-1'>
+						  <Suspense fallback={<Loading />}>{children}</Suspense>
+            </div>
+						<Footer />
+					</main>
 				</ThemeContext>
 			</body>
 		</html>

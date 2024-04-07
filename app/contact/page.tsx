@@ -1,8 +1,14 @@
 import Link from "next/link"
 
+export const metadata = {
+  title: "Pierre Fournier - Développeur freelance à Toulouse - Contact",
+  description:
+    "Vous avez une proposition de collaboration, une idée de projet ou une question ? N’hésitez pas à me contacter.",
+}
+
 export default function Page() {
 	return (
-		<div className='min-h-screen container py-5'>
+		<div className='container py-5'>
 			<h1 className='text-3xl font-bold pb-3'>Contact</h1>
 			<h2 className='text-lg max-w-xl pb-5'>
 				Vous avez une proposition de collaboration, une idée de projet ou une
