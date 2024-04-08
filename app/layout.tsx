@@ -29,9 +29,9 @@ export default function RootLayout({
 				<ThemeContext>
 					<main className='min-h-screen flex flex-col'>
 						<Header />
-            <div className='flex-1'>
-						  <Suspense fallback={<Loading />}>{children}</Suspense>
-            </div>
+						<div className='flex-1'>
+							<Suspense fallback={<Loading />}>{children}</Suspense>
+						</div>
 						<Footer />
 					</main>
 				</ThemeContext>

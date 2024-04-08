@@ -1,9 +1,10 @@
-import Link from "next/link"
+import { Metadata } from 'next'
+import Link from 'next/link'
 
-export const metadata = {
-  title: "Pierre Fournier - Développeur freelance à Toulouse - Contact",
-  description:
-    "Vous avez une proposition de collaboration, une idée de projet ou une question ? N’hésitez pas à me contacter.",
+export const metadata: Metadata = {
+	title: 'Pierre Fournier - Développeur freelance à Toulouse - Contact',
+	description:
+		'Vous avez une proposition de collaboration, une idée de projet ou une question ? N’hésitez pas à me contacter.',
 }
 
 export default function Page() {
@@ -18,7 +19,10 @@ export default function Page() {
 			<div className='flex flex-col gap-3'>
 				<h3 className='text-xl font-medium pb-3'>
 					Email :{' '}
-					<Link href='mailto:contact@pierrefournier.dev' className='text-blue-500'>
+					<Link
+						href='mailto:contact@pierrefournier.dev'
+						className='text-blue-500'
+					>
 						contact@pierrefournier.dev
 					</Link>
 				</h3>

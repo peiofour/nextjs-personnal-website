@@ -1,3 +1,25 @@
+import { Metadata } from 'next'
+import { ProjectCard, IProjectCard } from '../components'
+import data from '@/data/projects.json'
+
+export const metadata: Metadata = {
+	title: 'Pierre Fournier - Développeur freelance à Toulouse - Projets',
+	description:
+		"Les projets sur lesquels j'ai travaillé, mes contributions open-source et mes projets personnels.",
+}
+
 export default function Page() {
-	return <div className='container py-5'></div>
+
+  const projects: IProjectCard[] = data.projects
+
+	return (
+		<div className='container py-5'>
+			<h1 className='text-3xl font-bold pb-10'>Projets</h1>
+			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+				{projects.map((project) => (
+					<ProjectCard key={project.title} {...project} />
+				))}
+			</div>
+		</div>
+	)
 }
