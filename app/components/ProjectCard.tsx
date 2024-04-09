@@ -41,7 +41,9 @@ export function ProjectCard({
 			<div className='pl-4 pr-8 flex-[2] flex flex-col pb-4 text-center'>
 				<div className='flex-1'>
 					<h3 className='text-xl font-bold pb-1'>{title}</h3>
-					<p className='font-light text-base pb-3 leading-normal'>{description}</p>
+					<p className='font-light text-base pb-3 leading-normal'>
+						{description}
+					</p>
 				</div>
 				<div className='flex flex-col gap-3'>
 					<div className='flex items-center justify-center flex-wrap gap-3'>
@@ -57,17 +59,29 @@ export function ProjectCard({
 					</div>
 					<div className='flex items-center justify-center gap-2 pt-3'>
 						{website && (
-							<Link className='text-blue-500' href={website} target='_blank'>
+							<Link
+								className='text-blue-500 hover:text-blue-700 hover:bg-blue-100 px-2 py-1 rounded-lg transition-colors duration-300 ease-in-out'
+								href={website}
+								target='_blank'
+							>
 								Site web
 							</Link>
 						)}
 						{source && (
-							<Link className='text-blue-500' href={source} target='_blank'>
+							<Link
+								className='text-blue-500 hover:text-blue-700  hover:bg-blue-100 px-2 py-1 rounded-lg transition-colors duration-300 ease-in-out'
+								href={source}
+								target='_blank'
+							>
 								Source
 							</Link>
 						)}
 						{demo && (
-							<Link className='text-blue-500' href={demo} target='_blank'>
+							<Link
+								className='text-blue-500 hover:text-blue-700  hover:bg-blue-100 px-2 py-1 rounded-lg transition-colors duration-300 ease-in-out'
+								href={demo}
+								target='_blank'
+							>
 								Démo
 							</Link>
 						)}
