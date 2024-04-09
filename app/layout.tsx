@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import React from 'react'
-import { ThemeContext } from '@/context'
 import { Footer, Header } from '@/app/components'
 import '@/styles/globals.css'
 import { Suspense } from 'react'
 import Loading from './loading'
+import { Analytics } from '@vercel/analytics/react'
 
 const poppins = Poppins({
 	subsets: ['latin'],
@@ -45,16 +45,13 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang='fr'>
-			<body className={poppins.className}>
-				<ThemeContext>
-					<main className='min-h-screen flex flex-col'>
-						<Header />
-						<div className='flex-1'>
-							<Suspense fallback={<Loading />}>{children}</Suspense>
-						</div>
-						<Footer />
-					</main>
-				</ThemeContext>
+			<body className={`${poppins.className} min-h-screen flex flex-col`}>
+				<Header />
+				<main className='flex-1'>
+					<Suspense fallback={<Loading />}>{children}</Suspense>
+				</main>
+				<Footer />
+				<Analytics />
 			</body>
 		</html>
 	)
