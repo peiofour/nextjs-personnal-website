@@ -3,7 +3,7 @@ import { ProjectCard, IProjectCard } from '../components'
 import data from '@/data/projects.json'
 
 export const metadata: Metadata = {
-	title: 'Pierre Fournier - Développeur freelance à Toulouse - Projets',
+	title: 'Pierre Fournier - Développeur front-end freelance à Toulouse - Projets',
 	description:
 		"Les projets sur lesquels j'ai travaillé, mes contributions open-source et mes projets personnels.",
 }

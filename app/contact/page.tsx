@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-	title: 'Pierre Fournier - Développeur freelance à Toulouse - Contact',
+	title: 'Pierre Fournier - Développeur front-end freelance à Toulouse - Contact',
 	description:
 		'Vous avez une proposition de collaboration, une idée de projet ou une question ? N’hésitez pas à me contacter.',
 }
