@@ -6,6 +6,7 @@ import '@/styles/globals.css'
 import { Suspense } from 'react'
 import Loading from './loading'
 import { Analytics } from '@vercel/analytics/react'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const poppins = Poppins({
 	subsets: ['latin'],
@@ -17,11 +18,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
 	title: 'Pierre Fournier - Développeur front-end freelance à Toulouse',
 	description:
-		"Expert Frontend avec 6 ans d'expérience, spécialisé dans les technologies web modernes et innovantes. J'ai une solide expertise en React, Next.js, Vue, TypeScript, Ruby on Rails et Node.js, ce qui me permet d'accompagner mes clients dans la concrétisation de leurs projets et de leur apporter des solutions efficaces et performantes. Je peux aussi intervenir dans un cadre moins technique, pour conseiller sur l'ergonomie et la conception de sites et d'applications.",
+		"Expert Frontend avec 6 ans d'expérience, spécialisé dans les technologies web modernes et innovantes. J'ai une solide expertise en React, Next.js, Vue, TypeScript, Ruby on Rails et Node.js, ce qui me permet d'accompagner mes clients dans la concrétisation de leurs projets et de leur apporter des solutions efficaces et performantes.",
 	openGraph: {
 		title: 'Pierre Fournier - Développeur front-end freelance à Toulouse',
 		description:
-			"Expert Frontend avec 6 ans d'expérience, spécialisé dans les technologies web modernes et innovantes. J'ai une solide expertise en React, Next.js, Vue, TypeScript, Ruby on Rails et Node.js, ce qui me permet d'accompagner mes clients dans la concrétisation de leurs projets et de leur apporter des solutions efficaces et performantes. Je peux aussi intervenir dans un cadre moins technique, pour conseiller sur l'ergonomie et la conception de sites et d'applications.",
+			"Expert Frontend avec 6 ans d'expérience, spécialisé dans les technologies web modernes et innovantes. J'ai une solide expertise en React, Next.js, Vue, TypeScript, Ruby on Rails et Node.js, ce qui me permet d'accompagner mes clients dans la concrétisation de leurs projets et de leur apporter des solutions efficaces et performantes.",
 		url: 'https://www.pierrefournier.dev',
 		type: 'website',
 		locale: 'fr_FR',
@@ -96,6 +97,8 @@ export const metadata: Metadata = {
 export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
+	const googleAnalyticsId = process.env.GOOGLE_ANALYTICS_ID || ''
+
 	return (
 		<html lang='fr'>
 			<body className={`${poppins.className} min-h-screen flex flex-col`}>
@@ -106,6 +109,7 @@ export default function RootLayout({
 				<Footer />
 				<Analytics />
 			</body>
+			<GoogleAnalytics gaId={googleAnalyticsId} />
 		</html>
 	)
 }
