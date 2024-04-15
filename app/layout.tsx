@@ -7,6 +7,7 @@ import { Suspense } from 'react'
 import Loading from './loading'
 import { Analytics } from '@vercel/analytics/react'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { Providers } from './providers'
 
 const poppins = Poppins({
 	subsets: ['latin'],
@@ -101,13 +102,17 @@ export default function RootLayout({
 
 	return (
 		<html lang='fr'>
-			<body className={`${poppins.className} min-h-screen flex flex-col`}>
-				<Header />
-				<main className='flex-1'>
-					<Suspense fallback={<Loading />}>{children}</Suspense>
-				</main>
-				<Footer />
-				<Analytics />
+			<body className={poppins.className}>
+				<Providers>
+					<div className='min-h-screen flex flex-col'>
+						<Header />
+						<main className='flex-1'>
+							<Suspense fallback={<Loading />}>{children}</Suspense>
+						</main>
+						<Footer />
+					</div>
+					<Analytics />
+				</Providers>
 			</body>
 			<GoogleAnalytics gaId={googleAnalyticsId} />
 		</html>
