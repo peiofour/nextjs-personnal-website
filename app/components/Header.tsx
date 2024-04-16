@@ -12,6 +12,7 @@ import {
 	NavbarMenuItem,
 } from '@nextui-org/react'
 import { useState } from 'react'
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa6'
 
 export function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -31,10 +32,35 @@ export function Header() {
 				<NavbarItem>
 					<Link href='/contact'>Contact</Link>
 				</NavbarItem>
+				<NavbarItem>
+					<Link
+						href='https://www.linkedin.com/in/pierrefournier1/'
+						target='_blank'
+						rel='noreferrer'
+					>
+						<FaLinkedinIn
+							className='hover:text-secondary transition-colors duration-300'
+							size={20}
+						/>
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link
+						href='https://www.github.com/peiofour'
+						target='_blank'
+						rel='noreferrer'
+					>
+						<FaGithub
+							className='hover:text-secondary transition-colors duration-300'
+							size={20}
+						/>
+					</Link>
+				</NavbarItem>
 			</NavbarContent>
 			<NavbarMenuToggle
 				aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
 				className='sm:hidden'
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
 			/>
 			<NavbarMenu>
 				<NavbarMenuItem>
@@ -42,6 +68,30 @@ export function Header() {
 				</NavbarMenuItem>
 				<NavbarMenuItem>
 					<Link href='/contact'>Contact</Link>
+				</NavbarMenuItem>
+				<NavbarMenuItem>
+					<Link
+						href='https://www.linkedin.com/in/pierrefournier1/'
+						target='_blank'
+						rel='noreferrer'
+					>
+						<FaLinkedinIn
+							className='hover:text-secondary transition-colors duration-300'
+							size={20}
+						/>
+					</Link>
+				</NavbarMenuItem>
+				<NavbarMenuItem>
+					<Link
+						href='https://www.github.com/peiofour'
+						target='_blank'
+						rel='noreferrer'
+					>
+						<FaGithub
+							className='hover:text-secondary transition-colors duration-300'
+							size={20}
+						/>
+					</Link>
 				</NavbarMenuItem>
 			</NavbarMenu>
 		</Navbar>
