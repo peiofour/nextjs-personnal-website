@@ -31,8 +31,8 @@ export function Head() {
 		<div className='container flex flex-col items-center justify-between py-20 lg:p-24'>
 			<div className='container lg:max-w-4xl text-center space-y-6'>
 				<h1 className='text-3xl lg:text-5xl lg:leading-[72px] font-bold'>
-					<span className='text-primary'>Pierre</span>, un développeur
-					logiciel freelance <span className='text-secondary'>passionné</span>
+					<span className='text-primary'>Pierre</span>, développeur
+					front-end freelance <span className='text-secondary'>à Toulouse</span>
 				</h1>
 				<h2 className='text-lg lg:text-xl relative overflow-hidden h-[56px] lg:h-[28px]'>
 					<span

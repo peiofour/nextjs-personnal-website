@@ -16,8 +16,8 @@ export function Companies() {
 	return (
 		<div className='container flex flex-col gap-10 pt-10 pb-20'>
 			<div className='text-center flex flex-col gap-3'>
-				<h1 className='font-bold text-2xl lg:text-3xl'>{texts[0]}</h1>
-				<h2 className='text-lg'>{texts[1]}</h2>
+				<h2 className='font-bold text-2xl lg:text-3xl'>{texts[0]}</h2>
+				<h3 className='text-lg'>{texts[1]}</h3>
 			</div>
 			<div className='flex flex-wrap gap-10 lg:gap-20'>
 				<CompanyIcon src={loungeup} alt='LoungeUp' />

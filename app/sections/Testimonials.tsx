@@ -13,7 +13,7 @@ export function Testimonials() {
 		<div className='bg-tertiary py-14'>
 			<div className='container max-w-4xl relative flex flex-col gap-8 lg:gap-10'>
 				<div className='flex flex-col text-center'>
-					<h1 className='font-bold text-2xl lg:text-3xl'>Témoignages</h1>
+					<h2 className='font-bold text-2xl lg:text-3xl'>Témoignages</h2>
 				</div>
 				<div className='overflow-hidden'>
 					<div
@@ -76,8 +76,8 @@ function CarousselItem(testimonial: CarousselItemProps) {
 				{testimonial.text}
 			</p>
 			<div>
-				<h1 className='font-bold'>{testimonial.name}</h1>
-				<h2>{testimonial.job}</h2>
+				<h3 className='font-bold'>{testimonial.name}</h3>
+				<h4>{testimonial.job}</h4>
 			</div>
 		</div>
 	)
