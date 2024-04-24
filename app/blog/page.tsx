@@ -1,6 +1,6 @@
 import NextImage from 'next/image'
 import Link from 'next/link'
-import { Divider, Image } from '@nextui-org/react'
+import { Divider, Image, Chip } from '@nextui-org/react'
 import { allPosts } from '@/.contentlayer/generated'
 
 export default function Page() {
@@ -39,6 +39,11 @@ export default function Page() {
 										day: 'numeric',
 									})}
 								</p>
+								<div className='flex gap-3'>
+									{post.tags.map((tag) => (
+										<Chip key={tag}>{tag}</Chip>
+									))}
+								</div>
 							</div>
 						</Link>
 					</div>
