@@ -3,7 +3,7 @@ import React from 'react'
 
 export const metadata: Metadata = {
 	title:
-		'Pierre Fournier - Contact',
+		'Contact - Pierre Fournier',
 	description:
 		'Vous avez une proposition de collaboration, une idée de projet ou une question ? N’hésitez pas à me contacter.',
 }

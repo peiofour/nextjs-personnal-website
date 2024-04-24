@@ -1,7 +1,56 @@
 import NextImage from 'next/image'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Divider, Image, Chip } from '@nextui-org/react'
 import { allPosts } from '@/.contentlayer/generated'
+
+export const metadata: Metadata = {
+  title: 'Blog - Pierre Fournier',
+  description:
+    "Des articles sur le développement web, le design et la tech. Découvrez les dernières tendances et les meilleures pratiques pour améliorer vos compétences en développement.",
+  openGraph: {
+    title: 'Blog - Pierre Fournier',
+    description:
+      "Des articles sur le développement web, le design et la tech. Découvrez les dernières tendances et les meilleures pratiques pour améliorer vos compétences en développement.",
+    url: 'https://www.pierrefournier.dev/blog',
+    type: 'website',
+    locale: 'fr_FR',
+    images: [
+      {
+        url: 'https://70bprfhdgzifxi22.public.blob.vercel-storage.com/og_image_pierrefournier.png',
+        width: 1200,
+        height: 630,
+        alt: 'Blog - Pierre Fournier',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@peiofour',
+  },
+  keywords: [
+    'Blog',
+    'Blog tech',
+    'Tutoriels développement',
+    'Tutoriels React',
+    'Tutoriels Javascript',
+    'React',
+    'React Native',
+		'Next.js',
+		'Vue',
+		'TypeScript',
+		'JavaScript',
+		'Ruby on Rails',
+		'Node.js',
+		'Tailwind CSS',
+    'Développement web',
+    'Développement mobile',
+    'Développement front-end',
+    'Développement back-end',
+  ],
+  creator: 'Pierre Fournier',
+  robots: 'index, follow',
+}
 
 export default function Page() {
 	return (

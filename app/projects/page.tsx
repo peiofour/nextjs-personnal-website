@@ -3,11 +3,11 @@ import { ProjectCard, IProjectCard } from '../components'
 import data from '@/data/projects.json'
 
 export const metadata: Metadata = {
-	title: 'Pierre Fournier - Projets',
+	title: 'Projets - Pierre Fournier',
 	description:
 		"Les projets sur lesquels j'ai travaillé, mes contributions open-source et mes projets personnels.",
 	openGraph: {
-		title: 'Pierre Fournier - Projets',
+		title: 'Projets - Pierre Fournier',
 		description:
 			"Les projets sur lesquels j'ai travaillé, mes contributions open-source et mes projets personnels.",
 		url: 'https://www.pierrefournier.dev/projects',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 				url: 'https://70bprfhdgzifxi22.public.blob.vercel-storage.com/og_image_pierrefournier.png',
 				width: 1200,
 				height: 630,
-				alt: 'Pierre Fournier - Projets',
+				alt: 'Projets - Pierre Fournier',
 			},
 		],
 	},
