@@ -4,7 +4,7 @@
       "title": "Covidliste",
       "description": "Covidliste est une plateforme permettant de mettre en relation des personnes éligibles à la vaccination contre la Covid-19 et des personnes ayant des doses de vaccins en trop. J'ai aidé à développer la plateforme en tant que bénévole. J'ai principalement travaillé sur le back-end, en Ruby on Rails, avec une base de données PostgreSQL, et le déploiement sur Heroku.",
       "images": [
-        "https://70bprfhdgzifxi22.public.blob.vercel-storage.com/projects/covidliste.jpg"
+        "https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/projects/s49gfv0dc4uokjvvwbso"
       ],
       "alt": "Covidliste",
       "tags": [
@@ -19,7 +19,7 @@
       "title": "Henri Trip",
       "description": "Développeur principal et rapidement évoluer en dirigeant l’équipe technique, prenant les décisions sur les choix techniques et en formant des stagiaires et des alternants. J'ai migré tout le back-end en Ruby on Rails. J'ai également développé le front-end en React avec les autres développeurs de l'équipe. Gestion de l'infra cloud sur Scaleway.",
       "images": [
-        "https://70bprfhdgzifxi22.public.blob.vercel-storage.com/projects/henritrip.png"
+        "https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/projects/bi6roami61nsjgbb8tbn"
       ],
       "alt": "Henri Trip",
       "tags": [
@@ -35,7 +35,7 @@
       "title": "JAMap",
       "description": "JAMap est une application web permettant de visualiser des données utiles pour les campagnes électorales en France. Sur cette application, j'ai réalisé un découpage des circonscriptions, recenser tous les panneaux d'affichages publiques et les bureaux de votes. Cette application permet de signaler quand un panneau a été collé. Pour chaque panneau, des boutons Waze, Google maps et apple plans sont disponibles pour se rendre sur place.",
       "images": [
-        "https://70bprfhdgzifxi22.public.blob.vercel-storage.com/projects/JAMap.png"
+        "https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/projects/jamap"
       ],
       "alt": "JAMap",
       "tags": [
@@ -54,7 +54,7 @@
       "title": "People Vox",
       "description": "J'ai principalement effectué des développements de plusieurs fonctionnalités, en back-end et front-end, avec test unitaire et E2E. J'ai également développé une application permettant d'automatiser la création de courriers postaux et de les envoyer via l'API Service Postal. J'ai également effectué des corrections de bugs et des améliorations sur l'application de vote interne et sur le dashboard.",
       "images": [
-        "https://70bprfhdgzifxi22.public.blob.vercel-storage.com/projects/peoplevox1.webp"
+        "https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/People-Vox-mockup-test-vote-1-1_sejhgd"
       ],
       "alt": "People Vox",
       "tags": [
@@ -72,7 +72,7 @@
       "title": "Lounge Up",
       "description": "J'ai été chargé du développement du front-end du back office et de l'application Portail, avec React. Ma mission était de développer de nouvelles fonctionnalités, d'accélérer la migration du back-office legacy vers le nouveau back-office en React. J'ai également entrepris le passage de l'application Portail du langage JavaScript à Typescript. Aussi, j'ai mis en place Storybook pour que les développeurs puissent travaillaient plus facilement sur l'UI maison.",
       "images": [
-        "https://70bprfhdgzifxi22.public.blob.vercel-storage.com/projects/lougeup.png"
+        "https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/projects/fhvtobmnwvptrehbamvi"
       ],
       "alt": "Lounge Up",
       "tags": [
@@ -88,7 +88,7 @@
       "title": "Next Portfolio",
       "description": "Mon site personnel, que j'ai rafraichi en 2024. Il était auparavant en Gatsby, mais j'ai décidé de le refaire avec le nouveau Next.js 13, avec App Router. J'ai également utilisé Tailwind CSS pour le style, et Vercel pour le déploiement. J'y ai mis un section pour les projets ainsi qu'un blog.",
       "images": [
-        "https://70bprfhdgzifxi22.public.blob.vercel-storage.com/projects/portfolio_pierre-N8jaH5d3BITOUTNKQDJFDIRp7g1lyt.png"
+        "https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/projects/dbotqzmpjalewo8moc4u"
       ],
       "alt": "Next Portfolio",
       "tags": [
