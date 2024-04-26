@@ -11,13 +11,13 @@ export function Testimonials() {
 
 	return (
 		<div className='bg-tertiary py-14'>
-			<div className='container max-w-4xl relative flex flex-col gap-8 lg:gap-10'>
+			<div className='container relative flex max-w-4xl flex-col gap-8 lg:gap-10'>
 				<div className='flex flex-col text-center'>
-					<h2 className='font-bold text-2xl lg:text-3xl'>Témoignages</h2>
+					<h2 className='text-2xl font-bold lg:text-3xl'>Témoignages</h2>
 				</div>
 				<div className='overflow-hidden'>
 					<div
-						className='w-[200%] flex transition-all duration-500 ease-in-out'
+						className='flex w-[200%] transition-all duration-500 ease-in-out'
 						style={{ transform: `translateX(-${caroussel * 50}%)` }}
 					>
 						{testimonials.map((testimonial, index) => (
@@ -37,8 +37,8 @@ export function Testimonials() {
 						<button
 							key={index}
 							onClick={() => setCaroussel(index)}
-							className={`rounded-full w-4 h-4 ${
-								caroussel === index ? 'bg-secondary' : 'bg-white border-2'
+							className={`h-4 w-4 rounded-full ${
+								caroussel === index ? 'bg-secondary' : 'border-2 bg-white'
 							}`}
 						></button>
 					))}
@@ -65,14 +65,14 @@ function CarousselItem(testimonial: CarousselItemProps) {
 	}, [isMobileFromHook])
 
 	return (
-		<div className='flex flex-col items-center text-center gap-6 lg:gap-10 float-left w-[50%] lg:mx-5'>
+		<div className='float-left flex w-[50%] flex-col items-center gap-6 text-center lg:mx-5 lg:gap-10'>
 			<Image
 				loading='lazy'
 				src={testimonial.src}
 				alt={testimonial.alt}
 				width={isMobile ? 200 : 230}
 			/>
-			<p className='text-lg lg:text-xl font-normal h-full'>
+			<p className='h-full text-lg font-normal lg:text-xl'>
 				{testimonial.text}
 			</p>
 			<div>

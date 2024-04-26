@@ -56,9 +56,9 @@ export default function Page() {
 	// const tags = allPosts.map((post) => post.tags).flat()
 
 	return (
-		<div className='container pt-5 pb-10'>
-			<h1 className='text-3xl font-bold pb-3'>Blog</h1>
-			<h2 className='text-lg max-w-xl pb-10 text-gray-500'>
+		<div className='container pb-10 pt-5'>
+			<h1 className='pb-3 text-3xl font-bold'>Blog</h1>
+			<h2 className='max-w-xl pb-10 text-lg text-gray-500'>
 				Des articles sur le développement web, le design et la tech.
 			</h2>
 			<div className='flex'>
@@ -85,7 +85,7 @@ export default function Page() {
 
 							<Link
 								href={`/blog/${post.slug}`}
-								className='flex gap-10 cursor-pointer py-10'
+								className='flex cursor-pointer gap-10 py-10'
 							>
 								<div className='hidden md:block'>
 									<Image
@@ -97,7 +97,7 @@ export default function Page() {
 										className='rounded-lg'
 									/>
 								</div>
-								<div className='flex-1 flex flex-col'>
+								<div className='flex flex-1 flex-col'>
 									<p className='text-sm font-extralight text-gray-500'>
 										{new Date(post.date).toLocaleDateString('fr-FR', {
 											year: 'numeric',
@@ -105,8 +105,8 @@ export default function Page() {
 											day: 'numeric',
 										})}
 									</p>
-									<h3 className='text-2xl font-bold mb-3'>{post.title}</h3>
-									<p className='text-md font-light text-gray-500 mb-5'>
+									<h3 className='mb-3 text-2xl font-bold'>{post.title}</h3>
+									<p className='text-md mb-5 font-light text-gray-500'>
 										{post.description}
 									</p>
 									<div className='flex gap-3'>

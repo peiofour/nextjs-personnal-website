@@ -24,11 +24,11 @@ export function ProjectCard({
 }: IProjectCard) {
 	return (
 		<div
-			className='flex flex-col gap-4 h-[780px] max-w-[400px] shadow-card rounded-lg
-      bg-white transition-all duration-200 ease-in-out
+			className='flex h-[780px] max-w-[400px] flex-col gap-4 rounded-lg bg-white
+      shadow-card transition-all duration-200 ease-in-out
       hover:shadow-card-hover'
 		>
-			<div className='relative h-[300px] w-full bg-gray-300 rounded-t-lg overflow-hidden'>
+			<div className='relative h-[300px] w-full overflow-hidden rounded-t-lg bg-gray-300'>
 				<Image
 					fill
 					style={{
@@ -38,19 +38,19 @@ export function ProjectCard({
 					alt={alt}
 				/>
 			</div>
-			<div className='pl-4 pr-8 flex-[2] flex flex-col pb-4 text-center'>
+			<div className='flex flex-[2] flex-col pb-4 pl-4 pr-8 text-center'>
 				<div className='flex-1'>
-					<h3 className='text-xl font-bold pb-1'>{title}</h3>
-					<p className='font-light text-base pb-3 leading-normal'>
+					<h3 className='pb-1 text-xl font-bold'>{title}</h3>
+					<p className='pb-3 text-base font-light leading-normal'>
 						{description}
 					</p>
 				</div>
 				<div className='flex flex-col gap-3'>
-					<div className='flex items-center justify-center flex-wrap gap-3'>
+					<div className='flex flex-wrap items-center justify-center gap-3'>
 						{tags.map((tag) => (
 							<span
 								key={tag}
-								className='text-sm bg-gray-200 px-2 py-1 rounded-lg'
+								className='rounded-lg bg-gray-200 px-2 py-1 text-sm'
 								tabIndex={0}
 							>
 								{tag}
@@ -60,7 +60,7 @@ export function ProjectCard({
 					<div className='flex items-center justify-center gap-2 pt-3'>
 						{website && (
 							<Link
-								className='text-blue-500 hover:text-blue-700 hover:bg-blue-100 px-2 py-1 rounded-lg transition-colors duration-300 ease-in-out'
+								className='rounded-lg px-2 py-1 text-blue-500 transition-colors duration-300 ease-in-out hover:bg-blue-100 hover:text-blue-700'
 								href={website}
 								target='_blank'
 							>
@@ -69,7 +69,7 @@ export function ProjectCard({
 						)}
 						{source && (
 							<Link
-								className='text-blue-500 hover:text-blue-700  hover:bg-blue-100 px-2 py-1 rounded-lg transition-colors duration-300 ease-in-out'
+								className='rounded-lg px-2  py-1 text-blue-500 transition-colors duration-300 ease-in-out hover:bg-blue-100 hover:text-blue-700'
 								href={source}
 								target='_blank'
 							>
@@ -78,7 +78,7 @@ export function ProjectCard({
 						)}
 						{demo && (
 							<Link
-								className='text-blue-500 hover:text-blue-700  hover:bg-blue-100 px-2 py-1 rounded-lg transition-colors duration-300 ease-in-out'
+								className='rounded-lg px-2  py-1 text-blue-500 transition-colors duration-300 ease-in-out hover:bg-blue-100 hover:text-blue-700'
 								href={demo}
 								target='_blank'
 							>

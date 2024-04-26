@@ -1,14 +1,33 @@
 ---
 title: 'Devenir incollable sur les hooks en React'
 description: 'Les hooks sont une fonctionnalité de React qui permet de manipuler les états et les cycles de vie des fonctions dans les composants fonctionnels. Je vous apprends ici à les utiliser.'
-slug: "devenir-incollable-sur-les-hooks-en-react"
-date: "08/12/2023"
-keywords: ["tutoriel", "react", "reactjs", "react.js", "hooks", "useState", "useEffect", "useContext", "useReducer", "useCallback", "useMemo", "useRef", "Pierre Fournier", "tutoriel", "french", "fr", "français"]
-tags: ["Tutoriel", "React", "Javascript", "Frontend"]
-image: "https://res.cloudinary.com/pierrefournier-dev/image/upload/c_scale,h_800,q_100/v1691846892/react-hooksbis_pjr4fu.webp"
-alt: "Les hooks en React"
-author: "Pierre Fournier"
-type: "Post"
+slug: 'devenir-incollable-sur-les-hooks-en-react'
+date: '08/12/2023'
+keywords:
+  [
+    'tutoriel',
+    'react',
+    'reactjs',
+    'react.js',
+    'hooks',
+    'useState',
+    'useEffect',
+    'useContext',
+    'useReducer',
+    'useCallback',
+    'useMemo',
+    'useRef',
+    'Pierre Fournier',
+    'tutoriel',
+    'french',
+    'fr',
+    'français',
+  ]
+tags: ['Tutoriel', 'React', 'Javascript', 'Frontend']
+image: 'https://res.cloudinary.com/pierrefournier-dev/image/upload/c_scale,h_800,q_100/v1691846892/react-hooksbis_pjr4fu.webp'
+alt: 'Les hooks en React'
+author: 'Pierre Fournier'
+type: 'Post'
 ---
 
 ## Introduction
@@ -27,47 +46,47 @@ Le hook `useState` permet de gérer les états dans un composant fonctionnel. C'
 La fonction pour modifier le state peut prendre en paramètre une nouvelle valeur ou une fonction qui retourne une nouvelle valeur. La fonction pour modifier le stat peut être appelée dans un gestionnaire d'événement ou dans un autre hook.
 
 ```tsx
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
+	const [count, setCount] = useState(0)
 
-  const handleClick = () => {
-    setCount(count + 1);
-  };
+	const handleClick = () => {
+		setCount(count + 1)
+	}
 
-  return (
-    <div>
-      <p>Vous avez cliqué {count} fois</p>
-      <button onClick={handleClick}>Cliquez ici</button>
-    </div>
-  );
-};
+	return (
+		<div>
+			<p>Vous avez cliqué {count} fois</p>
+			<button onClick={handleClick}>Cliquez ici</button>
+		</div>
+	)
+}
 
-export default Counter;
+export default Counter
 ```
 
 Dans cet exemple, on utilise la fonction `useState` pour gérer un compteur. On initialise le compteur à 0. On utilise la fonction `setCount` pour modifier la valeur du compteur. On peut appeler cette fonction dans un gestionnaire d'événement ou dans un autre hook.
 
 ```tsx
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 const Name = () => {
-  const [name, setName] = useState("");
+	const [name, setName] = useState('')
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setName(event.target.value);
-  };
+	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setName(event.target.value)
+	}
 
-  return (
-    <div>
-      <p>Votre nom est {name}</p>
-      <input type="text" value={name} onChange={handleChange} />
-    </div>
-  );
-};
+	return (
+		<div>
+			<p>Votre nom est {name}</p>
+			<input type='text' value={name} onChange={handleChange} />
+		</div>
+	)
+}
 
-export default Name;
+export default Name
 ```
 
 Dans cet autre exemple, on utilise la fonction `useState` pour gérer un champ de formulaire. On initialise le champ à une chaîne vide. On utilise la fonction `setName` pour modifier la valeur du champ. On peut appeler cette fonction dans un gestionnaire d'événement ou dans un autre hook.
@@ -77,38 +96,38 @@ Dans cet autre exemple, on utilise la fonction `useState` pour gérer un champ d
 Le hook `useEffect` permet d'effectuer des effets de bord dans un composant fonctionnel. Il est appelé à chaque rendu du composant. Il prend en paramètre une fonction qui sera appelée à chaque rendu du composant. Cette fonction peut retourner une fonction de nettoyage qui sera appelée avant le prochain rendu du composant.
 
 ```tsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react'
 
 const Search = () => {
-  const [search, setSearch] = useState("");
-  const [results, setResults] = useState([]);
+	const [search, setSearch] = useState('')
+	const [results, setResults] = useState([])
 
-  useEffect(() => {
-    if (search.length < 3) {
-      return;
-    }
-    fetch(`https://api.github.com/search/repositories?q=${search}`)
-      .then((response) => response.json())
-      .then((data) => setResults(data.items));
-  }, [search]);
+	useEffect(() => {
+		if (search.length < 3) {
+			return
+		}
+		fetch(`https://api.github.com/search/repositories?q=${search}`)
+			.then((response) => response.json())
+			.then((data) => setResults(data.items))
+	}, [search])
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setSearch(event.target.value);
-	};
+	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setSearch(event.target.value)
+	}
 
-  return (
-    <div>
-      <input type="text" value={search} onChange={handleChange} />
-      <ul>
-        {results.map((result) => (
-          <li key={result.id}>{result.name}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+	return (
+		<div>
+			<input type='text' value={search} onChange={handleChange} />
+			<ul>
+				{results.map((result) => (
+					<li key={result.id}>{result.name}</li>
+				))}
+			</ul>
+		</div>
+	)
+}
 
-export default Search;
+export default Search
 ```
 
 Dans cet exemple, on utilise la fonction `useEffect` pour effectuer une requête à l'API de Github. On initialise le champ de recherche à une chaîne vide. On utilise la fonction `setSearch` pour modifier la valeur du champ. Le hook `useEffect` est appelé à chaque fois que la valeur du champ change. Si la valeur du champ est inférieure à 3 caractères, on ne fait rien. Sinon, on effectue une requête à l'API de Github et on met à jour la liste des résultats.
@@ -118,23 +137,21 @@ Dans cet exemple, on utilise la fonction `useEffect` pour effectuer une requête
 Le hook `useContext` permet de récupérer une valeur dans le contexte. Il prend en paramètre un objet de type `Context` et retourne la valeur du contexte.
 
 ```tsx
-import React, { useContext } from "react";
+import React, { useContext } from 'react'
 
-const ThemeContext = React.createContext("light");
+const ThemeContext = React.createContext('light')
 
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <ThemeContext.Provider value="dark">{children}</ThemeContext.Provider>
-  );
-};
+	return <ThemeContext.Provider value='dark'>{children}</ThemeContext.Provider>
+}
 
 const Theme = () => {
-  const theme = useContext(ThemeContext);
+	const theme = useContext(ThemeContext)
 
-  return <p>Le thème est {theme}</p>;
-};
+	return <p>Le thème est {theme}</p>
+}
 
-export default Theme;
+export default Theme
 ```
 
 Dans cet exemple, on utilise la fonction `useContext` pour récupérer la valeur du contexte. On initialise le contexte à `light`. On utilise la fonction `useContext` pour récupérer la valeur du contexte. On peut utiliser la fonction `useContext` dans un composant enfant du composant `ThemeProvider`.
@@ -150,47 +167,59 @@ La fonction de réduction prend en paramètre la valeur actuelle du state et une
 Quelle est la différence avec `useState` ? `useState` permet de gérer un seul état alors que `useReducer` permet de gérer plusieurs états et de les modifier avec une seule fonction.
 
 ```tsx
-import React, { useReducer } from "react";
+import React, { useReducer } from 'react'
 
 type State = {
-  name: string;
-  email: string;
-};
+	name: string
+	email: string
+}
 
-type Action = { type: "setName"; payload: string } | { type: "setEmail"; payload: string };
+type Action =
+	| { type: 'setName'; payload: string }
+	| { type: 'setEmail'; payload: string }
 
 const initialState = {
-  name: "",
-  email: "",
-};
+	name: '',
+	email: '',
+}
 
 const reducer = (state: State, action: Action) => {
-  switch (action.type) {
-    case "setName":
-      return { ...state, name: action.payload };
-    case "setEmail":
-      return { ...state, email: action.payload };
-    default:
-      return state;
-  }
-};
+	switch (action.type) {
+		case 'setName':
+			return { ...state, name: action.payload }
+		case 'setEmail':
+			return { ...state, email: action.payload }
+		default:
+			return state
+	}
+}
 
 const Form = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+	const [state, dispatch] = useReducer(reducer, initialState)
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch({ type: event.target.name, payload: event.target.value });
-  };
+	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		dispatch({ type: event.target.name, payload: event.target.value })
+	}
 
-  return (
-    <div>
-      <input type="text" name="setName" value={state.name} onChange={handleChange} />
-      <input type="text" name="setEmail" value={state.email} onChange={handleChange} />
-    </div>
-  );
-};
+	return (
+		<div>
+			<input
+				type='text'
+				name='setName'
+				value={state.name}
+				onChange={handleChange}
+			/>
+			<input
+				type='text'
+				name='setEmail'
+				value={state.email}
+				onChange={handleChange}
+			/>
+		</div>
+	)
+}
 
-export default Form;
+export default Form
 ```
 
 Dans cet exemple on utilise la fonction `useReducer` pour gérer un formulaire. On initialise le state avec un objet contenant les champs du formulaire. On utilise la fonction `dispatch` pour modifier la valeur du state. On peut appeler cette fonction dans un gestionnaire d'événement ou dans un autre hook. Le hook `useReducer` est utile quand on a plusieurs états à gérer plutôt que d'utiliser plusieurs `useState`.
@@ -212,32 +241,34 @@ Si on a besoin de mémoriser une valeur calculée, on utilise `useMemo`.
 Exemple : on a besoin de calculer le factoriel d'un nombre. On utilise `useMemo` pour mémoriser la valeur calculée.
 
 ```tsx
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo } from 'react'
 
 const CalculateFactorial = () => {
-  const [number, setNumber] = useState(0);
+	const [number, setNumber] = useState(0)
 
-  const factorial = useMemo(() => {
-    let result = 1;
-    for (let i = 1; i <= number; i++) {
-      result = result * i;
-    }
-    return result;
-  }, [number]);
+	const factorial = useMemo(() => {
+		let result = 1
+		for (let i = 1; i <= number; i++) {
+			result = result * i
+		}
+		return result
+	}, [number])
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setNumber(parseInt(event.target.value));
-  };
+	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setNumber(parseInt(event.target.value))
+	}
 
-  return (
-    <div>
-      <p>Le factoriel de {number} est {factorial}</p>
-      <input type="number" value={number} onChange={handleChange} />
-    </div>
-  );
-};
+	return (
+		<div>
+			<p>
+				Le factoriel de {number} est {factorial}
+			</p>
+			<input type='number' value={number} onChange={handleChange} />
+		</div>
+	)
+}
 
-export default CalculateFactorial;
+export default CalculateFactorial
 ```
 
 Si on a besoin de mémoriser une fonction, on utilise `useCallback`.
@@ -245,29 +276,29 @@ Si on a besoin de mémoriser une fonction, on utilise `useCallback`.
 Exemple : on a besoin de mémoriser une fonction pour incrémenter un compteur. On utilise `useCallback` pour mémoriser la fonction.
 
 ```tsx
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback } from 'react'
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
+	const [count, setCount] = useState(0)
 
-  const increment = useCallback(() => {
-    setCount(count + 1);
-  }, [count]);
+	const increment = useCallback(() => {
+		setCount(count + 1)
+	}, [count])
 
-  const decrement = useCallback(() => {
-    setCount(count - 1);
-  }, [count]);
+	const decrement = useCallback(() => {
+		setCount(count - 1)
+	}, [count])
 
-  return (
-    <div>
-      <p>Le compteur est à {count}</p>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
-    </div>
-  );
-};
+	return (
+		<div>
+			<p>Le compteur est à {count}</p>
+			<button onClick={increment}>+</button>
+			<button onClick={decrement}>-</button>
+		</div>
+	)
+}
 
-export default Counter;
+export default Counter
 ```
 
 Ces deux hooks permmettent d'éviter de recalculer une valeur ou de recréer une fonction à chaque rendu du composant. Cela permet d'optimiser les performances de l'application.
@@ -277,25 +308,24 @@ Ces deux hooks permmettent d'éviter de recalculer une valeur ou de recréer une
 Le hook `useRef` permet de créer une référence vers un élément du DOM. Il prend en paramètre une valeur initiale et retourne un objet avec une propriété `current` qui contient la valeur initiale. Cette valeur peut être modifiée à l'aide de la propriété `current`.
 
 ```tsx
-
-import React, { useRef } from "react";
+import React, { useRef } from 'react'
 
 const FocusInput = () => {
-  const inputRef = useRef<HTMLInputElement>(null);
+	const inputRef = useRef<HTMLInputElement>(null)
 
-  const handleClick = () => {
-    inputRef.current?.value = "Hello";
-  };
+	const handleClick = () => {
+		inputRef.current?.value = 'Hello'
+	}
 
-  return (
-    <div>
-      <input type="text" ref={inputRef} />
-      <button onClick={handleClick}>Focus</button>
-    </div>
-  );
-};
+	return (
+		<div>
+			<input type='text' ref={inputRef} />
+			<button onClick={handleClick}>Focus</button>
+		</div>
+	)
+}
 
-export default FocusInput;
+export default FocusInput
 ```
 
 Dans cet exemple on utilise la fonction `useRef` pour créer une référence vers un champ de formulaire. On initialise la référence à `null`. On utilise la propriété `current` pour modifier la valeur du champ. On peut appeler cette propriété dans un gestionnaire d'événement ou dans un autre hook.
@@ -309,35 +339,35 @@ Il est possible de créer ses propres hooks. Pour cela, il faut respecter les r�
 - Le hook peut utiliser d'autres hooks.
 
 ```tsx
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 const useCounter = (initialCount: number) => {
-  const [count, setCount] = useState(initialCount);
+	const [count, setCount] = useState(initialCount)
 
-  const increment = () => {
-    setCount(count + 1);
-  };
+	const increment = () => {
+		setCount(count + 1)
+	}
 
-  const decrement = () => {
-    setCount(count - 1);
-  };
+	const decrement = () => {
+		setCount(count - 1)
+	}
 
-  return { count, increment, decrement };
-};
+	return { count, increment, decrement }
+}
 
 const Counter = () => {
-  const { count, increment, decrement } = useCounter(0);
+	const { count, increment, decrement } = useCounter(0)
 
-  return (
-    <div>
-      <p>Le compteur est à {count}</p>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
-    </div>
-  );
-};
+	return (
+		<div>
+			<p>Le compteur est à {count}</p>
+			<button onClick={increment}>+</button>
+			<button onClick={decrement}>-</button>
+		</div>
+	)
+}
 
-export default Counter;
+export default Counter
 ```
 
 Dans cet exemple on crée un hook `useCounter` qui permet de gérer un compteur. On initialise le compteur à 0. On utilise la fonction `useCounter` pour gérer le compteur. On peut appeler cette fonction dans un composant fonctionnel.
@@ -345,35 +375,33 @@ Dans cet exemple on crée un hook `useCounter` qui permet de gérer un compteur.
 Autre exemple :
 
 ```tsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react'
 
 const useFetch = (url: string) => {
-  const [data, setData] = useState(null);
+	const [data, setData] = useState(null)
 
-  useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => setData(data));
-  }, [url]);
+	useEffect(() => {
+		fetch(url)
+			.then((response) => response.json())
+			.then((data) => setData(data))
+	}, [url])
 
-  return data;
-};
+	return data
+}
 
 const Fetch = () => {
-  const data = useFetch("https://api.github.com/search/repositories?q=react");
+	const data = useFetch('https://api.github.com/search/repositories?q=react')
 
-  return (
-    <div>
-      <ul>
-        {data?.items.map((item: any) => (
-          <li key={item.id}>{item.name}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+	return (
+		<div>
+			<ul>
+				{data?.items.map((item: any) => <li key={item.id}>{item.name}</li>)}
+			</ul>
+		</div>
+	)
+}
 
-export default Fetch;
+export default Fetch
 ```
 
 Dans cet exemple, on crée un hook `useFetch` qui permet de récupérer des données à partir d'une URL. On initialise les données à `null`. On utilise la fonction `useFetch` pour récupérer les données. On peut appeler cette fonction dans un composant fonctionnel.

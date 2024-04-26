@@ -12,7 +12,7 @@ export function Button({ link, text, variant = 'secondary' }: Props) {
 	const router = useRouter()
 	return (
 		<button
-			className={`border-2 border-secondary hover:bg-secondary text-lg text-${variant} hover:text-white transition-all duration-200 ease-in-out rounded-full px-6 py-2 font-medium`}
+			className={`border-2 border-secondary text-lg hover:bg-secondary text-${variant} rounded-full px-6 py-2 font-medium transition-all duration-200 ease-in-out hover:text-white`}
 			onClick={() => router.push(link)}
 		>
 			{text}

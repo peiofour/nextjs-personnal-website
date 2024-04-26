@@ -49,13 +49,13 @@ export default function Page() {
 	const projects: IProjectCard[] = data.projects
 
 	return (
-		<div className='container pt-5 pb-10'>
-			<h1 className='text-3xl font-bold pb-3'>Projets</h1>
-			<h2 className='text-lg max-w-xl pb-5'>
+		<div className='container pb-10 pt-5'>
+			<h1 className='pb-3 text-3xl font-bold'>Projets</h1>
+			<h2 className='max-w-xl pb-5 text-lg'>
 				Les projets sur lesquels j&apos;ai travaillé, mes contributions
 				open-source et mes projets personnels.
 			</h2>
-			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+			<div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
 				{projects.map((project) => (
 					<ProjectCard key={project.title} {...project} />
 				))}

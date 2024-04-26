@@ -17,11 +17,13 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-	title: 'Pierre Fournier - Développeur front-end React & Vue freelance à Toulouse',
+	title:
+		'Pierre Fournier - Développeur front-end React & Vue freelance à Toulouse',
 	description:
 		"Développeur front-end senior à Toulouse avec 6 ans d'expérience. Spécialisé en React, Next.js, Vue, TypeScript, Ruby on Rails, React-Native et Node.js, je transforme vos projets en solutions performantes et innovantes.",
 	openGraph: {
-		title: 'Pierre Fournier - Développeur front-end React & Vue freelance à Toulouse',
+		title:
+			'Pierre Fournier - Développeur front-end React & Vue freelance à Toulouse',
 		description:
 			"Développeur front-end senior à Toulouse avec 6 ans d'expérience. Spécialisé en React, Next.js, Vue, TypeScript, Ruby on Rails, React-Native et Node.js, je transforme vos projets en solutions performantes et innovantes.",
 		url: 'https://www.pierrefournier.dev',
@@ -42,13 +44,13 @@ export const metadata: Metadata = {
 	},
 	keywords: [
 		'Développeur front-end',
-    'Développeur front-end freelance',
-    'Développeur front-end freelance Toulouse',
-    'Développeur React Toulouse',
-    'Développeur Next.js Toulouse',
-    'Développeur Vue Toulouse',
+		'Développeur front-end freelance',
+		'Développeur front-end freelance Toulouse',
+		'Développeur React Toulouse',
+		'Développeur Next.js Toulouse',
+		'Développeur Vue Toulouse',
 		'React',
-    'React Native',
+		'React Native',
 		'Next.js',
 		'Vue',
 		'TypeScript',
@@ -63,7 +65,7 @@ export const metadata: Metadata = {
 		'Occitanie',
 	],
 	creator: 'Pierre Fournier',
-  robots: 'index, follow',
+	robots: 'index, follow',
 }
 
 export default function RootLayout({
@@ -75,7 +77,7 @@ export default function RootLayout({
 		<html lang='fr'>
 			<body className={poppins.className}>
 				<Providers>
-					<div className='min-h-screen flex flex-col'>
+					<div className='flex min-h-screen flex-col'>
 						<Header />
 						<main className='flex-1'>
 							<Suspense fallback={<Loading />}>{children}</Suspense>

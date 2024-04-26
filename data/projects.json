@@ -1,105 +1,83 @@
 {
-  "projects": [
-    {
-      "title": "Covidliste",
-      "description": "Covidliste est une plateforme permettant de mettre en relation des personnes éligibles à la vaccination contre la Covid-19 et des personnes ayant des doses de vaccins en trop. J'ai aidé à développer la plateforme en tant que bénévole. J'ai principalement travaillé sur le back-end, en Ruby on Rails, avec une base de données PostgreSQL, et le déploiement sur Heroku.",
-      "images": [
-        "https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/projects/s49gfv0dc4uokjvvwbso"
-      ],
-      "alt": "Covidliste",
-      "tags": [
-        "Ruby on Rails",
-        "PostgreSQL",
-        "Heroku"
-      ],
-      "website": "https://covidliste.com",
-      "source": "https://github.com/hostolab/covidliste"
-    },
-    {
-      "title": "Henri Trip",
-      "description": "Développeur principal et rapidement évoluer en dirigeant l’équipe technique, prenant les décisions sur les choix techniques et en formant des stagiaires et des alternants. J'ai migré tout le back-end en Ruby on Rails. J'ai également développé le front-end en React avec les autres développeurs de l'équipe. Gestion de l'infra cloud sur Scaleway.",
-      "images": [
-        "https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/projects/bi6roami61nsjgbb8tbn"
-      ],
-      "alt": "Henri Trip",
-      "tags": [
-        "Ruby on Rails",
-        "React",
-        "PostgreSQL",
-        "Scaleway",
-        "Cypress"
-      ],
-      "website": "https://www.henritrip.fr/"
-    },
-    {
-      "title": "JAMap",
-      "description": "JAMap est une application web permettant de visualiser des données utiles pour les campagnes électorales en France. Sur cette application, j'ai réalisé un découpage des circonscriptions, recenser tous les panneaux d'affichages publiques et les bureaux de votes. Cette application permet de signaler quand un panneau a été collé. Pour chaque panneau, des boutons Waze, Google maps et apple plans sont disponibles pour se rendre sur place.",
-      "images": [
-        "https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/projects/jamap"
-      ],
-      "alt": "JAMap",
-      "tags": [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Mapbox",
-        "Supabase",
-        "PostgreSQL"
-      ],
-      "source": "https://github.com/peiofour/jamap",
-      "website": "https://www.jamap.fr/"
-    },
-    {
-      "title": "People Vox",
-      "description": "J'ai principalement effectué des développements de plusieurs fonctionnalités, en back-end et front-end, avec test unitaire et E2E. J'ai également développé une application permettant d'automatiser la création de courriers postaux et de les envoyer via l'API Service Postal. J'ai également effectué des corrections de bugs et des améliorations sur l'application de vote interne et sur le dashboard.",
-      "images": [
-        "https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/People-Vox-mockup-test-vote-1-1_sejhgd"
-      ],
-      "alt": "People Vox",
-      "tags": [
-        "Next.js",
-        "React",
-        "MongoDB",
-        "TypeScript",
-        "Storybook",
-        "Cypress",
-        "Jest"
-      ],
-      "website": "https://people-vox.com/"
-    },
-    {
-      "title": "Lounge Up",
-      "description": "J'ai été chargé du développement du front-end du back office et de l'application Portail, avec React. Ma mission était de développer de nouvelles fonctionnalités, d'accélérer la migration du back-office legacy vers le nouveau back-office en React. J'ai également entrepris le passage de l'application Portail du langage JavaScript à Typescript. Aussi, j'ai mis en place Storybook pour que les développeurs puissent travaillaient plus facilement sur l'UI maison.",
-      "images": [
-        "https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/projects/fhvtobmnwvptrehbamvi"
-      ],
-      "alt": "Lounge Up",
-      "tags": [
-        "React",
-        "TypeScript",
-        "Vite",
-        "Storybook",
-        "React Native"
-      ],
-      "website": "https://www.loungeup.com/"
-    },
-    {
-      "title": "Next Portfolio",
-      "description": "Mon site personnel, que j'ai rafraichi en 2024. Il était auparavant en Gatsby, mais j'ai décidé de le refaire avec le nouveau Next.js 13, avec App Router. J'ai également utilisé Tailwind CSS pour le style, et Vercel pour le déploiement. J'y ai mis un section pour les projets ainsi qu'un blog.",
-      "images": [
-        "https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/projects/dbotqzmpjalewo8moc4u"
-      ],
-      "alt": "Next Portfolio",
-      "tags": [
-        "Next.js",
-        "Tailwind CSS",
-        "Vercel",
-        "React",
-        "TypeScript"
-      ],
-      "source": "https://github.com/peiofour/nextjs-personnal-website",
-      "website": "https://www.pierrefournier.dev"
-    }
-  ]
+	"projects": [
+		{
+			"title": "Covidliste",
+			"description": "Covidliste est une plateforme permettant de mettre en relation des personnes éligibles à la vaccination contre la Covid-19 et des personnes ayant des doses de vaccins en trop. J'ai aidé à développer la plateforme en tant que bénévole. J'ai principalement travaillé sur le back-end, en Ruby on Rails, avec une base de données PostgreSQL, et le déploiement sur Heroku.",
+			"images": [
+				"https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/projects/s49gfv0dc4uokjvvwbso"
+			],
+			"alt": "Covidliste",
+			"tags": ["Ruby on Rails", "PostgreSQL", "Heroku"],
+			"website": "https://covidliste.com",
+			"source": "https://github.com/hostolab/covidliste"
+		},
+		{
+			"title": "Henri Trip",
+			"description": "Développeur principal et rapidement évoluer en dirigeant l’équipe technique, prenant les décisions sur les choix techniques et en formant des stagiaires et des alternants. J'ai migré tout le back-end en Ruby on Rails. J'ai également développé le front-end en React avec les autres développeurs de l'équipe. Gestion de l'infra cloud sur Scaleway.",
+			"images": [
+				"https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/projects/bi6roami61nsjgbb8tbn"
+			],
+			"alt": "Henri Trip",
+			"tags": ["Ruby on Rails", "React", "PostgreSQL", "Scaleway", "Cypress"],
+			"website": "https://www.henritrip.fr/"
+		},
+		{
+			"title": "JAMap",
+			"description": "JAMap est une application web permettant de visualiser des données utiles pour les campagnes électorales en France. Sur cette application, j'ai réalisé un découpage des circonscriptions, recenser tous les panneaux d'affichages publiques et les bureaux de votes. Cette application permet de signaler quand un panneau a été collé. Pour chaque panneau, des boutons Waze, Google maps et apple plans sont disponibles pour se rendre sur place.",
+			"images": [
+				"https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/projects/jamap"
+			],
+			"alt": "JAMap",
+			"tags": [
+				"React",
+				"Next.js",
+				"TypeScript",
+				"Tailwind CSS",
+				"Mapbox",
+				"Supabase",
+				"PostgreSQL"
+			],
+			"source": "https://github.com/peiofour/jamap",
+			"website": "https://www.jamap.fr/"
+		},
+		{
+			"title": "People Vox",
+			"description": "J'ai principalement effectué des développements de plusieurs fonctionnalités, en back-end et front-end, avec test unitaire et E2E. J'ai également développé une application permettant d'automatiser la création de courriers postaux et de les envoyer via l'API Service Postal. J'ai également effectué des corrections de bugs et des améliorations sur l'application de vote interne et sur le dashboard.",
+			"images": [
+				"https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/People-Vox-mockup-test-vote-1-1_sejhgd"
+			],
+			"alt": "People Vox",
+			"tags": [
+				"Next.js",
+				"React",
+				"MongoDB",
+				"TypeScript",
+				"Storybook",
+				"Cypress",
+				"Jest"
+			],
+			"website": "https://people-vox.com/"
+		},
+		{
+			"title": "Lounge Up",
+			"description": "J'ai été chargé du développement du front-end du back office et de l'application Portail, avec React. Ma mission était de développer de nouvelles fonctionnalités, d'accélérer la migration du back-office legacy vers le nouveau back-office en React. J'ai également entrepris le passage de l'application Portail du langage JavaScript à Typescript. Aussi, j'ai mis en place Storybook pour que les développeurs puissent travaillaient plus facilement sur l'UI maison.",
+			"images": [
+				"https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/projects/fhvtobmnwvptrehbamvi"
+			],
+			"alt": "Lounge Up",
+			"tags": ["React", "TypeScript", "Vite", "Storybook", "React Native"],
+			"website": "https://www.loungeup.com/"
+		},
+		{
+			"title": "Next Portfolio",
+			"description": "Mon site personnel, que j'ai rafraichi en 2024. Il était auparavant en Gatsby, mais j'ai décidé de le refaire avec le nouveau Next.js 13, avec App Router. J'ai également utilisé Tailwind CSS pour le style, et Vercel pour le déploiement. J'y ai mis un section pour les projets ainsi qu'un blog.",
+			"images": [
+				"https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/projects/dbotqzmpjalewo8moc4u"
+			],
+			"alt": "Next Portfolio",
+			"tags": ["Next.js", "Tailwind CSS", "Vercel", "React", "TypeScript"],
+			"source": "https://github.com/peiofour/nextjs-personnal-website",
+			"website": "https://www.pierrefournier.dev"
+		}
+	]
 }

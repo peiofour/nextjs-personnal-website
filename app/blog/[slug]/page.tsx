@@ -74,11 +74,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
 			<h1 className='mb-5 px-3 text-2xl font-bold md:px-0 lg:text-4xl'>
 				{post.title}
 			</h1>
-			<p className='px-3 pb-10 text-medium leading-relaxed md:px-0 lg:text-lg'>
+			<p className='px-3 text-medium leading-relaxed md:px-0 lg:text-lg'>
 				{post.description}
 			</p>
 
-			<article className='prose prose-gray max-w-5xl lg:prose-lg prose-headings:px-3 prose-p:px-3 prose-em:text-medium prose-em:text-gray-500 prose-img:mb-2 prose-img:-ml-3 prose-img:w-full prose-img:max-w-7xl prose-img:w-svw md:prose-headings:px-0 md:prose-p:px-0 md:prose-img:max-w-[750px] md:prose-img:rounded-lg'>
+			<article className='prose prose-gray max-w-5xl lg:prose-lg prose-headings:px-3 prose-p:px-3 prose-em:text-medium prose-em:text-gray-500 prose-img:-ml-3 prose-img:mb-2 prose-img:w-full prose-img:w-svw prose-img:max-w-7xl md:prose-headings:px-0 md:prose-p:px-0 md:prose-img:max-w-[750px] md:prose-img:rounded-lg'>
 				<div dangerouslySetInnerHTML={{ __html: post.body.html }} />
 			</article>
 		</div>

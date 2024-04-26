@@ -5,7 +5,7 @@ import { useIsMobile } from '@/hooks'
 
 export function Head() {
 	const [count, setCount] = useState(0)
-	const [subtitle,] = useState([
+	const [subtitle] = useState([
 		'Je développe des applications web performantes avec Next.js',
 		'Je conçois des interfaces modernes avec React',
 		'Je crée des architectures robustes et scalables avec Ruby on Rails',
@@ -29,14 +29,14 @@ export function Head() {
 
 	return (
 		<div className='container flex flex-col items-center justify-between py-20 lg:p-24'>
-			<div className='container lg:max-w-4xl text-center space-y-6'>
-				<h1 className='text-3xl lg:text-5xl lg:leading-[72px] font-bold'>
-					<span className='text-primary'>Pierre</span>, développeur
-					front-end freelance <span className='text-secondary'>à Toulouse</span>
+			<div className='container space-y-6 text-center lg:max-w-4xl'>
+				<h1 className='text-3xl font-bold lg:text-5xl lg:leading-[72px]'>
+					<span className='text-primary'>Pierre</span>, développeur front-end
+					freelance <span className='text-secondary'>à Toulouse</span>
 				</h1>
-				<h2 className='text-lg lg:text-xl relative overflow-hidden h-[56px] lg:h-[28px]'>
+				<h2 className='relative h-[56px] overflow-hidden text-lg lg:h-[28px] lg:text-xl'>
 					<span
-						className='absolute flex flex-col transition-all duration-500 ease-in-expo left-0 right-0'
+						className='ease-in-expo absolute left-0 right-0 flex flex-col transition-all duration-500'
 						style={{ top: `-${count * (isMobile ? 56 : 28)}px` }}
 					>
 						{subtitle.map((element, index) => (
