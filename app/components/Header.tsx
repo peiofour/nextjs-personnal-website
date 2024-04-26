@@ -17,7 +17,7 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa6'
 export function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	return (
-		<Navbar maxWidth='xl'>
+		<Navbar maxWidth='2xl'>
 			<NavbarContent justify='start'>
 				<NavbarBrand>
 					<Link href='/'>
@@ -25,9 +25,12 @@ export function Header() {
 					</Link>
 				</NavbarBrand>
 			</NavbarContent>
-			<NavbarContent className='hidden sm:flex gap-4' justify='end'>
+			<NavbarContent className='hidden gap-4 sm:flex' justify='end'>
 				<NavbarItem>
 					<Link href='/projects'>Projets</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link href='/blog'>Blog</Link>
 				</NavbarItem>
 				<NavbarItem>
 					<Link href='/contact'>Contact</Link>
@@ -39,7 +42,7 @@ export function Header() {
 						rel='noreferrer'
 					>
 						<FaLinkedinIn
-							className='hover:text-secondary transition-colors duration-300'
+							className='transition-colors duration-300 hover:text-secondary'
 							size={20}
 						/>
 					</Link>
@@ -51,7 +54,7 @@ export function Header() {
 						rel='noreferrer'
 					>
 						<FaGithub
-							className='hover:text-secondary transition-colors duration-300'
+							className='transition-colors duration-300 hover:text-secondary'
 							size={20}
 						/>
 					</Link>
@@ -67,6 +70,9 @@ export function Header() {
 					<Link href='/projects'>Projets</Link>
 				</NavbarMenuItem>
 				<NavbarMenuItem>
+					<Link href='/blog'>Blog</Link>
+				</NavbarMenuItem>
+				<NavbarMenuItem>
 					<Link href='/contact'>Contact</Link>
 				</NavbarMenuItem>
 				<NavbarMenuItem>
@@ -76,7 +82,7 @@ export function Header() {
 						rel='noreferrer'
 					>
 						<FaLinkedinIn
-							className='hover:text-secondary transition-colors duration-300'
+							className='transition-colors duration-300 hover:text-secondary'
 							size={20}
 						/>
 					</Link>
@@ -88,7 +94,7 @@ export function Header() {
 						rel='noreferrer'
 					>
 						<FaGithub
-							className='hover:text-secondary transition-colors duration-300'
+							className='transition-colors duration-300 hover:text-secondary'
 							size={20}
 						/>
 					</Link>

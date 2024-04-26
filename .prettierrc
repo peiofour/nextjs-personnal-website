@@ -6,5 +6,6 @@
   "semi": false,
   "singleQuote": true,
   "jsxSingleQuote": true,
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

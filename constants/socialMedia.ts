@@ -12,5 +12,5 @@ export const SOCIAL_MEDIA = [
 		label: 'GitHub',
 		url: 'https://www.github.com/peiofour',
 		icon: FaGithub,
-	}
+	},
 ]

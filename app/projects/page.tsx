@@ -3,11 +3,11 @@ import { ProjectCard, IProjectCard } from '../components'
 import data from '@/data/projects.json'
 
 export const metadata: Metadata = {
-	title: 'Pierre Fournier - Projets',
+	title: 'Projets - Pierre Fournier',
 	description:
 		"Les projets sur lesquels j'ai travaillé, mes contributions open-source et mes projets personnels.",
 	openGraph: {
-		title: 'Pierre Fournier - Projets',
+		title: 'Projets - Pierre Fournier',
 		description:
 			"Les projets sur lesquels j'ai travaillé, mes contributions open-source et mes projets personnels.",
 		url: 'https://www.pierrefournier.dev/projects',
@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 		locale: 'fr_FR',
 		images: [
 			{
-				url: 'https://70bprfhdgzifxi22.public.blob.vercel-storage.com/og_image_pierrefournier.png',
+				url: 'https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/n0crqaaearqdbsafq3jp',
 				width: 1200,
 				height: 630,
-				alt: 'Pierre Fournier - Projets',
+				alt: 'Projets - Pierre Fournier',
 			},
 		],
 	},
@@ -49,13 +49,13 @@ export default function Page() {
 	const projects: IProjectCard[] = data.projects
 
 	return (
-		<div className='container pt-5 pb-10'>
-			<h1 className='text-3xl font-bold pb-3'>Projets</h1>
-			<h2 className='text-lg max-w-xl pb-5'>
+		<div className='container pb-10 pt-5'>
+			<h1 className='pb-3 text-3xl font-bold'>Projets</h1>
+			<h2 className='max-w-xl pb-5 text-lg'>
 				Les projets sur lesquels j&apos;ai travaillé, mes contributions
 				open-source et mes projets personnels.
 			</h2>
-			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+			<div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
 				{projects.map((project) => (
 					<ProjectCard key={project.title} {...project} />
 				))}

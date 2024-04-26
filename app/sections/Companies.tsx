@@ -14,9 +14,9 @@ import { useIsMobile } from '@/hooks'
 
 export function Companies() {
 	return (
-		<div className='container flex flex-col gap-10 pt-10 pb-20'>
-			<div className='text-center flex flex-col gap-3'>
-				<h2 className='font-bold text-2xl lg:text-3xl'>{texts[0]}</h2>
+		<div className='container flex flex-col gap-10 pb-20 pt-10'>
+			<div className='flex flex-col gap-3 text-center'>
+				<h2 className='text-2xl font-bold lg:text-3xl'>{texts[0]}</h2>
 				<h3 className='text-lg'>{texts[1]}</h3>
 			</div>
 			<div className='flex flex-wrap gap-10 lg:gap-20'>

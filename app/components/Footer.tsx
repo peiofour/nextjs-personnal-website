@@ -5,21 +5,21 @@ import { MdEmail } from 'react-icons/md'
 
 export function Footer() {
 	return (
-		<footer className='bg-primary h-72 py-20'>
+		<footer className='h-72 bg-primary py-20'>
 			<div className='container flex flex-col gap-8'>
 				<div className='mx-auto'>
 					<Link href='/'>
 						<Logo variant='white' size='lg' />
 					</Link>
 				</div>
-				<div className='flex gap-3 mx-auto'>
+				<div className='mx-auto flex gap-3'>
 					<Link
 						href={'mailto:contact@pierrefournier.dev'}
 						target='_blank'
 						rel='noreferrer'
 					>
 						<MdEmail
-							className='text-white hover:text-secondary transition-colors duration-300'
+							className='text-white transition-colors duration-300 hover:text-secondary'
 							size={25}
 						/>
 					</Link>
@@ -29,7 +29,7 @@ export function Footer() {
 						rel='noreferrer'
 					>
 						<FaLinkedinIn
-							className='text-white hover:text-secondary transition-colors duration-300'
+							className='text-white transition-colors duration-300 hover:text-secondary'
 							size={25}
 						/>
 					</Link>
@@ -40,12 +40,12 @@ export function Footer() {
 						rel='noreferrer'
 					>
 						<FaGithub
-							className='text-white hover:text-secondary transition-colors duration-300'
+							className='text-white transition-colors duration-300 hover:text-secondary'
 							size={25}
 						/>
 					</Link>
 				</div>
-				<div className='text-white text-center'>
+				<div className='text-center text-white'>
 					<p>&copy; 2024 Pierre Fournier</p>
 				</div>
 			</div>
