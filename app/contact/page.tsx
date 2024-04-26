@@ -31,16 +31,16 @@ export default function Page() {
 
 	return (
 		<div className='container py-5'>
-			<h1 className='text-3xl font-bold pb-3'>Contact</h1>
-			<h2 className='text-lg max-w-xl pb-5'>
+			<h1 className='pb-3 text-3xl font-bold'>Contact</h1>
+			<h2 className='max-w-xl pb-5 text-lg'>
 				Vous avez une proposition de collaboration, une idée de projet ou une
 				question ?
 			</h2>
 
 			<form onSubmit={handleSubmit}>
-				<div className='flex flex-col space-y-4 max-w-2xl'>
-					<div className='flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4'>
-						<div className='flex flex-col w-full'>
+				<div className='flex max-w-2xl flex-col space-y-4'>
+					<div className='flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0'>
+						<div className='flex w-full flex-col'>
 							<label htmlFor='name' className='text-sm font-semibold'>
 								Nom
 							</label>
@@ -48,11 +48,11 @@ export default function Page() {
 								id='name'
 								name='name'
 								type='text'
-								className='border border-gray-300 rounded-md p-2'
+								className='rounded-md border border-gray-300 p-2'
 								required
 							/>
 						</div>
-						<div className='flex flex-col w-full'>
+						<div className='flex w-full flex-col'>
 							<label htmlFor='email' className='text-sm font-semibold'>
 								Email
 							</label>
@@ -60,24 +60,24 @@ export default function Page() {
 								id='email'
 								name='email'
 								type='email'
-								className='border border-gray-300 rounded-md p-2'
+								className='rounded-md border border-gray-300 p-2'
 								required
 							/>
 						</div>
 					</div>
-					<div className='flex flex-col w-full'>
+					<div className='flex w-full flex-col'>
 						<label htmlFor='message' className='text-sm font-semibold'>
 							Message
 						</label>
 						<textarea
 							id='message'
 							name='message'
-							className='border border-gray-300 rounded-md p-2'
+							className='rounded-md border border-gray-300 p-2'
 							required
 						/>
 					</div>
 					<Button
-						className='bg-secondary text-white font-semibold text-sm'
+						className='rounded-md bg-secondary text-sm font-semibold text-white'
 						type='submit'
 						disableAnimation
 						isLoading={isLoading}
@@ -87,7 +87,7 @@ export default function Page() {
 				</div>
 			</form>
 			{isSuccess && (
-				<div className='text-green-500 mt-3'>
+				<div className='mt-3 text-green-500'>
 					Votre message a été envoyé avec succès.
 				</div>
 			)}

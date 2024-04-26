@@ -11,8 +11,6 @@ author: "Pierre Fournier"
 type: "Post"
 ---
 
-La crise sanitaire a bouleversé nos modes de vie et de travail. Elle nous a aussi montré que nous pouvons nous adapter à des situations inédites et repenser nos priorités. Parmi les pistes de réflexion qui ont émergé, celle de la semaine de quatre jours a suscité un intérêt croissant, tant chez les salariés que chez les employeurs.
-
 ### Une idée qui fait son chemin
 
 Cette idée peut s'inscrire dans la lignée du progressisme qui a porté Emmanuel Macron à la présidence en 2017. Après un épisode mouvementé sur la réforme des retraites, il serait opportun de retrouver l’ADN du candidat qui avait su proposer des solutions innovantes et audacieuses pour moderniser notre pays.

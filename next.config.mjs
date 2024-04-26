@@ -4,10 +4,22 @@ import { withContentlayer } from 'next-contentlayer'
 
 const nextConfig = {
 	images: {
-		domains: [
-			'via.placeholder.com',
-			'res.cloudinary.com',
-			'70bprfhdgzifxi22.public.blob.vercel-storage.com',
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'via.placeholder.com',
+				pathname: '**',
+			},
+			{
+				protocol: 'https',
+				hostname: 'res.cloudinary.com',
+				pathname: '**',
+			},
+			{
+				protocol: 'https',
+				hostname: '70bprfhdgzifxi22.public.blob.vercel-storage.com',
+				pathname: '**',
+			},
 		],
 	},
 }
