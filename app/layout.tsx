@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 		locale: 'fr_FR',
 		images: [
 			{
-				url: 'https://70bprfhdgzifxi22.public.blob.vercel-storage.com/og_image_pierrefournier.png',
+				url: 'https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/n0crqaaearqdbsafq3jp',
 				width: 1200,
 				height: 630,
 				alt: 'Pierre Fournier - Développeur front-end React & Vue freelance à Toulouse',
