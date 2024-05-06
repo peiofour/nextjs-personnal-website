@@ -54,13 +54,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
 	const post = allPosts.find((p) => p.slug === slug) as Post
 
 	return (
-		<div className='mt-20 max-w-5xl pb-10 md:container'>
+		<div className='md:mt-20 max-w-5xl pb-10 md:container'>
 			<Image
 				as={NextImage}
 				src={post.image}
 				alt={post.alt}
-				width={750}
-				height={0}
+				width={1200}
+        height={630}
 				className='mb-2 w-full rounded-none md:rounded-lg'
 			/>
 			<em className='px-3 text-gray-500 md:px-0'>{post.alt}</em>
