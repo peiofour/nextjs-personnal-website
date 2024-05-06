@@ -1,24 +1,41 @@
-import { MetadataRoute } from 'next'
+import { allPosts } from '@/.contentlayer/generated'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-	return [
+const URL = 'https://www.pierrefournier.dev'
+
+export default async function sitemap() {
+	const routes = [
 		{
-			url: 'https://www.pierrefournier.dev/',
-			lastModified: new Date(),
+			url: `${URL}/`,
+			lastModified: new Date().toISOString(),
 			changeFrequency: 'yearly',
 			priority: 1.0,
 		},
 		{
-			url: 'https://www.pierrefournier.dev/projects',
-			lastModified: new Date(),
+			url: `${URL}/blog`,
+			lastModified: new Date().toISOString(),
+			changeFrequency: 'weekly',
+			priority: 0.9,
+		},
+		{
+			url: `${URL}/projects`,
+			lastModified: new Date().toISOString(),
 			changeFrequency: 'yearly',
 			priority: 0.8,
 		},
 		{
-			url: 'https://www.pierrefournier.dev/contact',
-			lastModified: new Date(),
+			url: `${URL}/contact`,
+			lastModified: new Date().toISOString(),
 			changeFrequency: 'yearly',
-			priority: 0.7,
+			priority: 0.5,
 		},
 	]
+
+	const posts = allPosts.map((post) => ({
+		url: `${URL}/blog/${post.slug}`,
+		lastModified: new Date(post.date).toISOString(),
+		changeFrequency: 'monthly',
+		priority: 0.7,
+	}))
+
+	return routes.concat(posts)
 }
