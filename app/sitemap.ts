@@ -17,7 +17,7 @@ export default async function sitemap() {
 			priority: 0.9,
 		},
 		{
-			url: `${URL}/projects`,
+			url: `${URL}/projets`,
 			lastModified: new Date().toISOString(),
 			changeFrequency: 'yearly',
 			priority: 0.8,

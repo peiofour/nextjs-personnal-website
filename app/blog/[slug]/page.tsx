@@ -17,7 +17,7 @@ export async function generateMetadata({
 		openGraph: {
 			title: `${post.title} - Pierre Fournier`,
 			siteName:
-				'Pierre Fournier - Développeur front-end React & Vue freelance à Toulouse',
+				'Pierre Fournier - Développeur front-end freelance à Toulouse',
 			description: post.description,
 			url: `https://www.pierrefournier.dev/blog/${post.slug}`,
 			type: 'article',

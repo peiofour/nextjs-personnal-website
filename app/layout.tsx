@@ -17,15 +17,13 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-	title:
-		'Pierre Fournier - Développeur front-end React & Vue freelance à Toulouse',
+	title: 'Pierre Fournier - Développeur front-end freelance à Toulouse',
 	description:
-		"Développeur front-end senior à Toulouse avec 6 ans d'expérience. Spécialisé en React, Next.js, Vue, TypeScript, Ruby on Rails, React-Native et Node.js, je transforme vos projets en solutions performantes et innovantes.",
+		'Développeur freelance spécialisé en React, Vue, TypeScript, Next.js, Ruby on Rails, React-Native et Node.js, je transforme vos projets en solutions performantes et innovantes.',
 	openGraph: {
-		title:
-			'Pierre Fournier - Développeur front-end React & Vue freelance à Toulouse',
+		title: 'Pierre Fournier - Développeur front-end freelance à Toulouse',
 		description:
-			"Développeur front-end senior à Toulouse avec 6 ans d'expérience. Spécialisé en React, Next.js, Vue, TypeScript, Ruby on Rails, React-Native et Node.js, je transforme vos projets en solutions performantes et innovantes.",
+			'Développeur freelance spécialisé en React, Vue, TypeScript, Next.js, Ruby on Rails, React-Native et Node.js, je transforme vos projets en solutions performantes et innovantes.',
 		url: 'https://www.pierrefournier.dev',
 		type: 'website',
 		locale: 'fr_FR',
@@ -34,7 +32,7 @@ export const metadata: Metadata = {
 				url: 'https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/n0crqaaearqdbsafq3jp',
 				width: 1200,
 				height: 630,
-				alt: 'Pierre Fournier - Développeur front-end React & Vue freelance à Toulouse',
+				alt: 'Pierre Fournier - Développeur front-end freelance à Toulouse',
 			},
 		],
 	},
@@ -44,25 +42,29 @@ export const metadata: Metadata = {
 	},
 	keywords: [
 		'Développeur front-end',
+		'Développeur fullstack',
+		'Développeur fullstack freelance',
+		'Développeur fullstack freelance Toulouse',
 		'Développeur front-end freelance',
 		'Développeur front-end freelance Toulouse',
+		'Développeur web freelance',
+		'Développeur web freelance Toulouse',
+		'Développeur freelance Toulouse',
 		'Développeur React Toulouse',
 		'Développeur Next.js Toulouse',
 		'Développeur Vue Toulouse',
-		'React',
-		'React Native',
-		'Next.js',
-		'Vue',
-		'TypeScript',
-		'JavaScript',
-		'Ruby on Rails',
-		'Node.js',
-		'Tailwind CSS',
+		'Développeur React',
+		'Développeur React Native',
+		'Développeur Next.js',
+		'Développeur Vue',
+		'Développeur TypeScript',
+		'Développeur Javascript',
+		'Développeur Ruby on Rails',
+		'Développeur Node.js',
+		'Développeur Tailwind CSS',
 		'Développeur web',
 		'Développeur mobile',
 		'Développeur freelance',
-		'Toulouse',
-		'Occitanie',
 	],
 	creator: 'Pierre Fournier',
 	robots: 'index, follow',
@@ -84,8 +86,8 @@ export default function RootLayout({
 						</main>
 						<Footer />
 					</div>
-					<Analytics />
 				</Providers>
+				<Analytics />
 			</body>
 			<GoogleAnalytics gaId={googleAnalyticsId} />
 		</html>

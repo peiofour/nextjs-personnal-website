@@ -27,7 +27,7 @@ export function Header() {
 			</NavbarContent>
 			<NavbarContent className='hidden gap-4 sm:flex' justify='end'>
 				<NavbarItem>
-					<Link href='/projects'>Projets</Link>
+					<Link href='/projets'>Projets</Link>
 				</NavbarItem>
 				<NavbarItem>
 					<Link href='/blog'>Blog</Link>
@@ -67,7 +67,7 @@ export function Header() {
 			/>
 			<NavbarMenu>
 				<NavbarMenuItem>
-					<Link href='/projects'>Projets</Link>
+					<Link href='/projets'>Projets</Link>
 				</NavbarMenuItem>
 				<NavbarMenuItem>
 					<Link href='/blog'>Blog</Link>

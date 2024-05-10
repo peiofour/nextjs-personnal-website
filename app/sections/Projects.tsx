@@ -22,7 +22,7 @@ export function Projects() {
 				))}
 			</div>
 			<div className='mx-auto'>
-				<Button link='/projects' text='Voir plus' />
+				<Button link='/projets' text='Voir plus' />
 			</div>
 		</div>
 	)
