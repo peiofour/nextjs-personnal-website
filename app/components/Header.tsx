@@ -27,6 +27,9 @@ export function Header() {
 			</NavbarContent>
 			<NavbarContent className='hidden gap-4 sm:flex' justify='end'>
 				<NavbarItem>
+					<Link href='/services'>Services</Link>
+				</NavbarItem>
+				<NavbarItem>
 					<Link href='/projets'>Projets</Link>
 				</NavbarItem>
 				<NavbarItem>
@@ -66,6 +69,9 @@ export function Header() {
 				onClick={() => setIsMenuOpen(!isMenuOpen)}
 			/>
 			<NavbarMenu>
+				<NavbarMenuItem>
+					<Link href='/services'>Services</Link>
+				</NavbarMenuItem>
 				<NavbarMenuItem>
 					<Link href='/projets'>Projets</Link>
 				</NavbarMenuItem>

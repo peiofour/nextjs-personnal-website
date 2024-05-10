@@ -32,7 +32,7 @@ export default function Page() {
 	return (
 		<div className='container py-5'>
 			<h1 className='pb-3 text-3xl font-bold'>Contact</h1>
-			<h2 className='max-w-xl pb-5 text-lg'>
+			<h2 className='max-w-xl pb-10 text-lg text-gray-500'>
 				Vous avez une proposition de collaboration, une idée de projet ou une
 				question ?
 			</h2>
