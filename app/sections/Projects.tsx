@@ -10,7 +10,7 @@ export function Projects() {
 				<h2 className='pb-3 text-3xl font-bold'>
 					{"Les projets sur lesquels j'ai travaillé"}
 				</h2>
-				<h3 className='text-lg'>
+				<h3 className='text-lg text-gray-500'>
 					{
 						"Je travaille sur des projets personnels et professionnels. Voici quelques exemples de projets sur lesquels j'ai travaillé."
 					}

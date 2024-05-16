@@ -30,7 +30,7 @@ export function Header() {
 					<Link href='/services'>Services</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link href='/projets'>Projets</Link>
+					<Link href='/projets'>Portfolio</Link>
 				</NavbarItem>
 				<NavbarItem>
 					<Link href='/blog'>Blog</Link>

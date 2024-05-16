@@ -11,7 +11,7 @@ export function Collaborate() {
 					Discutons-en ensemble.
 				</p>
 				<div>
-					<Button link='/contact' text='Démarrer' variant='white' />
+					<Button link='/contact' text='Contactez-moi !' variant='white' />
 				</div>
 			</div>
 		</div>

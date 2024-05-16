@@ -17,7 +17,7 @@ export function Companies() {
 		<div className='container flex flex-col gap-10 pb-20 pt-10'>
 			<div className='flex flex-col gap-3 text-center'>
 				<h2 className='text-2xl font-bold lg:text-3xl'>{texts[0]}</h2>
-				<h3 className='text-lg'>{texts[1]}</h3>
+				<h3 className='text-lg text-gray-500'>{texts[1]}</h3>
 			</div>
 			<div className='flex flex-wrap gap-10 lg:gap-20'>
 				<CompanyIcon src={loungeup} alt='LoungeUp' />
@@ -34,10 +34,7 @@ export function Companies() {
 	)
 }
 
-const texts = [
-	"Ils m'ont fait confiance",
-	"Je suis fier d'avoir collaborer avec ces entreprises",
-]
+const texts = ["Ils m'ont fait confiance", 'Vous êtes entre de bonnes mains']
 
 function CompanyIcon({
 	src,
@@ -52,6 +49,7 @@ function CompanyIcon({
 				alt={alt}
 				width={isMobile ? width / 1.5 : width}
 				height={isMobile ? width / 1.5 : width}
+				className='scale-100 transform transition-transform duration-300 hover:scale-110'
 			/>
 		</div>
 	)
