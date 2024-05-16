@@ -1,4 +1,6 @@
-import { Button, ProjectCard, IProjectCard } from '@/app/components'
+import { ProjectCard, IProjectCard } from '@/app/components'
+import { Button } from '@nextui-org/react'
+import Link from 'next/link'
 import data from '@/data/projects.json'
 
 export function Projects() {
@@ -22,7 +24,11 @@ export function Projects() {
 				))}
 			</div>
 			<div className='mx-auto'>
-				<Button link='/projets' text='Voir plus' />
+				<Link href='/projects'>
+					<Button color='secondary' radius='md' size='lg'>
+						Voir plus
+					</Button>
+				</Link>
 			</div>
 		</div>
 	)
