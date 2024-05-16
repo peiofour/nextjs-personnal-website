@@ -24,7 +24,7 @@ export function Projects() {
 				))}
 			</div>
 			<div className='mx-auto'>
-				<Link href='/projects'>
+				<Link href='/projets'>
 					<Button color='secondary' radius='md' size='lg'>
 						Voir plus
 					</Button>
