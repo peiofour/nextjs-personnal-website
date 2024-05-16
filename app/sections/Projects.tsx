@@ -1,4 +1,6 @@
-import { Button, ProjectCard, IProjectCard } from '@/app/components'
+import { ProjectCard, IProjectCard } from '@/app/components'
+import { Button } from '@nextui-org/react'
+import Link from 'next/link'
 import data from '@/data/projects.json'
 
 export function Projects() {
@@ -10,7 +12,7 @@ export function Projects() {
 				<h2 className='pb-3 text-3xl font-bold'>
 					{"Les projets sur lesquels j'ai travaillé"}
 				</h2>
-				<h3 className='text-lg'>
+				<h3 className='text-lg text-gray-500'>
 					{
 						"Je travaille sur des projets personnels et professionnels. Voici quelques exemples de projets sur lesquels j'ai travaillé."
 					}
@@ -22,7 +24,11 @@ export function Projects() {
 				))}
 			</div>
 			<div className='mx-auto'>
-				<Button link='/projets' text='Voir plus' />
+				<Link href='/projets'>
+					<Button color='secondary' radius='md' size='lg'>
+						Voir plus
+					</Button>
+				</Link>
 			</div>
 		</div>
 	)

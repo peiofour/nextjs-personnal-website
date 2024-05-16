@@ -1,4 +1,5 @@
-import { Button } from '@/app/components'
+import { Button } from '@nextui-org/react'
+import Link from 'next/link'
 
 export function Collaborate() {
 	return (
@@ -10,9 +11,15 @@ export function Collaborate() {
 					votre application ? Des corrections à effectuer sur votre site ?<br />
 					Discutons-en ensemble.
 				</p>
-				<div>
-					<Button link='/contact' text='Démarrer' variant='white' />
-				</div>
+				<Link href='/contact'>
+          <Button
+            color='secondary'
+            radius='md'
+            size='lg'
+          >
+            Contactez-moi
+          </Button>
+        </Link>
 			</div>
 		</div>
 	)

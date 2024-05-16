@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { sendEmail } from './action'
-import { Button } from '@nextui-org/react'
+import { Button, Input, Textarea } from '@nextui-org/react'
 
 export interface IContactForm {
 	name: string
@@ -31,8 +31,8 @@ export default function Page() {
 
 	return (
 		<div className='container py-5'>
-			<h1 className='pb-3 text-3xl font-bold'>Contact</h1>
-			<h2 className='max-w-xl pb-5 text-lg'>
+			<h1 className='pb-3 text-3xl font-bold'>Gardons contact</h1>
+			<h2 className='max-w-xl pb-10 text-lg text-gray-500'>
 				Vous avez une proposition de collaboration, une idée de projet ou une
 				question ?
 			</h2>
@@ -41,46 +41,45 @@ export default function Page() {
 				<div className='flex max-w-2xl flex-col space-y-4'>
 					<div className='flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0'>
 						<div className='flex w-full flex-col'>
-							<label htmlFor='name' className='text-sm font-semibold'>
-								Nom
-							</label>
-							<input
+							<Input
 								id='name'
+								label='Nom'
 								name='name'
 								type='text'
-								className='rounded-md border border-gray-300 p-2'
-								required
+								variant='bordered'
+								isRequired
 							/>
 						</div>
 						<div className='flex w-full flex-col'>
-							<label htmlFor='email' className='text-sm font-semibold'>
-								Email
-							</label>
-							<input
+							<Input
 								id='email'
+								label='Email'
 								name='email'
 								type='email'
-								className='rounded-md border border-gray-300 p-2'
-								required
+								variant='bordered'
+								isRequired
 							/>
 						</div>
 					</div>
 					<div className='flex w-full flex-col'>
-						<label htmlFor='message' className='text-sm font-semibold'>
-							Message
-						</label>
-						<textarea
+						<Textarea
 							id='message'
+							label='Message'
 							name='message'
-							className='rounded-md border border-gray-300 p-2'
-							required
+							placeholder='Entrer votre message ici'
+              labelPlacement='outside'
+							isRequired
+							variant='bordered'
+              minRows={5}
 						/>
 					</div>
 					<Button
-						className='rounded-md bg-secondary text-sm font-semibold text-white'
 						type='submit'
 						disableAnimation
 						isLoading={isLoading}
+						radius='md'
+            size='lg'
+            color='secondary'
 					>
 						Envoyer
 					</Button>

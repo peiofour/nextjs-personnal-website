@@ -51,7 +51,7 @@ export default function Page() {
 	return (
 		<div className='container pb-10 pt-5'>
 			<h1 className='pb-3 text-3xl font-bold'>Projets</h1>
-			<h2 className='max-w-xl pb-5 text-lg'>
+			<h2 className='max-w-xl pb-10 text-lg text-gray-500'>
 				Les projets sur lesquels j&apos;ai travaillé, mes contributions
 				open-source et mes projets personnels.
 			</h2>

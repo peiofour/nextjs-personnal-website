@@ -27,7 +27,7 @@ export function Header() {
 			</NavbarContent>
 			<NavbarContent className='hidden gap-4 sm:flex' justify='end'>
 				<NavbarItem>
-					<Link href='/projets'>Projets</Link>
+					<Link href='/projets'>Portfolio</Link>
 				</NavbarItem>
 				<NavbarItem>
 					<Link href='/blog'>Blog</Link>
