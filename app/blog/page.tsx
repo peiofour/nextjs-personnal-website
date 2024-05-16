@@ -55,19 +55,21 @@ export const metadata: Metadata = {
 export default function Page() {
 	// const tags = allPosts.map((post) => post.tags).flat()
 
-	return (
-		<div className='container pb-10 pt-5'>
-			<h1 className='pb-3 text-3xl font-bold'>Blog</h1>
-			<h2 className='max-w-xl pb-10 text-lg text-gray-500'>
-				Des articles sur le développement web, le design et la tech.
-			</h2>
-			<div className='flex'>
-				{/* <div className='hidden h-full max-h-screen min-w-[280px] max-w-[280px] flex-wrap overflow-auto rounded bg-gray-50 pt-5 shadow-md dark:bg-gray-900/70 dark:shadow-gray-800/40 sm:flex'>
-					<div className='px-6 py-4'>
-						<Link href='/blog'>
-							<h3 className='text-lg font-semibold'>Tous les posts</h3>
-						</Link>
-						<ul>
+  const sortedPosts = allPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  return (
+    <div className='container pb-10 pt-5'>
+      <h1 className='pb-3 text-3xl font-bold'>Blog</h1>
+      <h2 className='max-w-xl pb-10 text-lg text-gray-500'>
+        Des articles sur le développement web, le design et la tech.
+      </h2>
+      <div className='flex'>
+        {/* <div className='hidden h-full max-h-screen min-w-[280px] max-w-[280px] flex-wrap overflow-auto rounded bg-gray-50 pt-5 shadow-md dark:bg-gray-900/70 dark:shadow-gray-800/40 sm:flex'>
+          <div className='px-6 py-4'>
+            <Link href='/blog'>
+              <h3 className='text-lg font-semibold'>Tous les posts</h3>
+            </Link>
+            <ul>
               {tags.map((tag) => (
                 <li key={tag} className='my-3'>
                   <Link href={`/blog/tags/${tag}`} className='px-3 py-2'>
@@ -76,52 +78,52 @@ export default function Page() {
                 </li>
               ))}
             </ul>
-					</div>
-				</div> */}
-				<div>
-					{allPosts.map((post, index) => (
-						<div key={index}>
-							<Divider />
+          </div>
+        </div> */}
+        <div>
+          {sortedPosts.map((post, index) => (
+            <div key={index}>
+              <Divider />
 
-							<Link
-								href={`/blog/${post.slug}`}
-								className='flex cursor-pointer gap-10 py-10'
-							>
-								<div className='hidden md:block'>
-									<Image
-										as={NextImage}
-										src={post.image}
-										alt={post.alt}
-										width={300}
-										height={100}
-										className='rounded-lg'
-									/>
-								</div>
-								<div className='flex flex-1 flex-col'>
-									<p className='text-sm font-extralight text-gray-500'>
-										{new Date(post.date).toLocaleDateString('fr-FR', {
-											year: 'numeric',
-											month: 'long',
-											day: 'numeric',
-										})}
-									</p>
-									<h3 className='mb-3 text-2xl font-bold'>{post.title}</h3>
-									<p className='text-md mb-5 font-light text-gray-500'>
-										{post.description}
-									</p>
-									<div className='flex gap-3'>
-										{post.tags.map((tag) => (
-											<Chip color='secondary' key={tag}>
-												{tag}
-											</Chip>
-										))}
-									</div>
-								</div>
-							</Link>
-						</div>
-					))}
-				</div>
-			</div>
-		</div>
-	)
+              <Link
+                href={`/blog/${post.slug}`}
+                className='flex cursor-pointer gap-10 py-10'
+              >
+                <div className='hidden md:block'>
+                  <Image
+                    as={NextImage}
+                    src={post.image}
+                    alt={post.alt}
+                    width={300}
+                    height={100}
+                    className='rounded-lg'
+                  />
+                </div>
+                <div className='flex flex-1 flex-col'>
+                  <p className='text-sm font-extralight text-gray-500'>
+                    {new Date(post.date).toLocaleDateString('fr-FR', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </p>
+                  <h3 className='mb-3 text-2xl font-bold'>{post.title}</h3>
+                  <p className='text-md mb-5 font-light text-gray-500'>
+                    {post.description}
+                  </p>
+                  <div className='flex gap-3'>
+                    {post.tags.map((tag) => (
+                      <Chip color='secondary' key={tag}>
+                        {tag}
+                      </Chip>
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
