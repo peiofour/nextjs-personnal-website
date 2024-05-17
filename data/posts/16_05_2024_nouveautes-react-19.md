@@ -37,12 +37,12 @@ N'oubliez pas, React 19 est toujours en cours de développement à l'heure actue
 
 Voici un aperçu rapide des nouvelles fonctionnalités que React 19 va apporter :
 
-- 🤖 **Compilateur React :** React travaille sur la mise en place d'un nouveau compilateur. Actuellement, Instagram utilise déjà cette technologie, et elle sera disponible dans les futures versions de React.
-- 🔥 **Server component :** React a introduit le concept de composants serveur après des années de développement. Vous pourrez désormais utiliser cette fonctionnalité avec Next.js.
+- 🤖 **Compilateur React :** React 19 introduit un nouveau compilateur, beaucoup plus rapide. Il est déjà utilisé sur l'app Instagram.
+- 🔥 **Server component :** Déjà présent dans Next.js, cette fonctionnalité sera désormais native à React.
 - 💪 **Actions :** Les actions vont révolutionner la façon dont nous interagissons avec les éléments du DOM.
-- 🌇 **Document Metadata :** Une autre amélioration très attendue est en cours, qui permettra aux développeurs de faire plus avec moins de code.
+- 🌇 **Document Metadata :** Une autre amélioration très attendue, qui permettra aux développeurs de faire plus avec moins de code.
 - 💼 **Chargement des ressources :** Cela permettra aux ressources de se charger en arrière-plan, ce qui améliorera le temps de chargement de l'application et l'expérience utilisateur.
-- 🪝 **Hooks améliorés :** De nouveaux hooks passionnants sont en préparation, qui vont révolutionner notre expérience de codage.
+- 🪝 **Nouveaux hooks :** use, useFormStatus, useFormStates.
 
 React 19 va s'attaquer à l'un des problèmes de longue date de React : le problème des re-render excessifs. Les développeurs ont passé d'innombrables heures à résoudre ce problème, qui peut entraîner des problèmes de performances.
 
@@ -56,27 +56,22 @@ React détectera et mémorisera intelligemment le code, ce qui se traduira par u
 
 Actuellement, React ne re-render pas automatiquement lors d'un changement d'état. Une façon d'optimiser ces re-render est d'utiliser manuellement `useMemo()`, `useCallback()`, et les `memo`. Selon l'équipe React, il s'agissait d'un "compromis raisonnable". Leur vision était de laisser React gérer ces re-render.
 
-Mais l'équipe React s'est rendu compte que l'optimisation manuelle est pénible, 
+Mais l'équipe React s'est rendu compte que l'optimisation manuelle est pénible.
 
-Et c'est ainsi que l'équipe React a créé le "compilateur React". Le compilateur React va maintenant gérer ces re-rendus. React décidera automatiquement quand et comment changer l'état et mettre à jour l'interface utilisateur.
+C'est pourquoi ils ont créé le "compilateur React". Ce compilateur va maintenant gérer ces re-render. React décidera automatiquement quand et comment changer l'état et mettre à jour l'interface utilisateur.
 
 Avec cela, nous les développeurs n'avons plus besoin de le faire manuellement. Cela signifie également qu'il n'est plus nécessaire d'utiliser `useMemo()`, `useCallback()`, et `memo`.
 
-En conséquence, React décidera quels composants optimiser et quand, ainsi que ce qu'il faut re-render.
-
 ## 🔥 Server component
 
-Jusqu'à présent, les composants React ont principalement fonctionné sur le côté client. Mais React introduit le concept révolutionnaire de faire fonctionner des composants sur le côté serveur.
+Ce concept est déjà implémenté dans Next.js. En effet, à partir de Next.js 13, tous les composants sont des composants serveur par défaut et pour faire fonctionner un composant sur le côté client, il faut utiliser la directive `"use client"`.
 
-Ce concept est déjà implémenté dans Next.js. En effect, à partir de Next.js 13, tous les composants sont des composants serveur par défaut. Pour faire fonctionner un composant sur le côté client, vous devez utiliser la directive `"use client"`.
-
-Dans React 19, les composants serveur seront intégrés directement dans React, ce qui apportera de nombreux avantages :
+Les composants serveur seront intégrés directement dans React, ce qui apportera de nombreux avantages :
 
 - **SEO :** Les composants rendus sur le serveur améliorent l'optimisation pour les moteurs de recherche en fournissant un contenu plus accessible aux robots d'exploration web.
 - **Performances améliorées :** Les composants serveur contribuent à des temps de chargement de page initiaux plus rapides et à des performances globales améliorées, en particulier pour les applications riches en contenu.
 - **Exécution sur le serveur :** Les composants serveur permettent d'exécuter du code sur le serveur, ce qui facilite et rend plus efficaces les tâches telles que les appels API.
 
-Ces avantages soulignent le gros potentiel des server components dans le développement web moderne.
 
 Contrairement à Next.js, les composants dans React sont par défaut côté client. Ce n'est que lorsque vous utilisez `'use server'` que le composant devient un composant serveur.
 
@@ -96,8 +91,6 @@ export default async function requestUsername(formData) {
 ```
 
 ## 💪 Actions
-
-Les actions sont une nouvelle fonctionnalité de React 19 qui va révolutionner la façon dont nous interagissons avec les formulaires notamment.
 
 Les actions vous permettront d'intégrer des actions avec la balise HTML `<form/>`. En termes plus simples, vous pourrez remplacer l'événement `onSubmit` par des actions. Ces actions sont des attributs de formulaire HTML.
 
