@@ -6,7 +6,6 @@ import '@/styles/globals.css'
 import { Suspense } from 'react'
 import Loading from './loading'
 import { Analytics } from '@vercel/analytics/react'
-import { GoogleAnalytics } from '@next/third-parties/google'
 import { Providers } from './providers'
 
 const poppins = Poppins({
@@ -73,8 +72,6 @@ export const metadata: Metadata = {
 export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
-	const googleAnalyticsId = process.env.GOOGLE_ANALYTICS_ID || ''
-
 	return (
 		<html lang='fr'>
 			<body className={poppins.className}>
@@ -89,7 +86,6 @@ export default function RootLayout({
 				</Providers>
 				<Analytics />
 			</body>
-			<GoogleAnalytics gaId={googleAnalyticsId} />
 		</html>
 	)
 }
