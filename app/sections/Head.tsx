@@ -8,11 +8,13 @@ export function Head() {
 	const [subtitle] = useState([
 		'Je développe des applications web performantes avec Next.js',
 		'Je conçois des interfaces modernes avec React',
+    'Je crée des SaaS clé en main avec Stripe et MongoDB',
 		'Je crée des architectures robustes et scalables avec Ruby on Rails',
 		'Je convertis des maquettes Figma en UI moderne',
 		'Je conçois des interfaces utilisateur réactives avec Vue.js',
 		'Je développe des applications mobile avec React Native',
-		'Je crée des API RESTful et GraphQL avec Node.js',
+		'Je crée des API RESTful avec Node.js et Express',
+    'Je mets en place des bases de données performantes avec PostgreSQL',
 	])
 
 	useEffect(() => {
@@ -31,7 +33,7 @@ export function Head() {
 		<div className='container flex flex-col items-center justify-between py-20 lg:p-24'>
 			<div className='container space-y-6 text-center lg:max-w-4xl'>
 				<h1 className='text-3xl font-bold lg:text-5xl lg:leading-[72px]'>
-					<span className='text-primary'>Pierre</span>, développeur front-end
+					<span className='text-primary'>Pierre</span>, développeur fullstack
 					freelance <span className='text-secondary'>à Toulouse</span>
 				</h1>
 				<h2 className='relative h-[56px] overflow-hidden text-lg lg:h-[28px] lg:text-xl'>

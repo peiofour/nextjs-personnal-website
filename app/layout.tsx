@@ -16,13 +16,13 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-	title: 'Pierre Fournier - Développeur front-end freelance à Toulouse',
+	title: 'Pierre Fournier - Développeur fullstack freelance à Toulouse',
 	description:
-		'Développeur freelance spécialisé en React, Vue, TypeScript, Next.js, Ruby on Rails, React-Native et Node.js, je transforme vos projets en solutions performantes et innovantes.',
+		'Développeur fullstack freelance à Toulouse, spécialisé en React, Vue, Node.js, Next.js, je vous accompagne dans la réalisation de votre projet web ou mobile, de la conception à la mise en ligne.',
 	openGraph: {
-		title: 'Pierre Fournier - Développeur front-end freelance à Toulouse',
+		title: 'Pierre Fournier - Développeur fullstack freelance à Toulouse',
 		description:
-			'Développeur freelance spécialisé en React, Vue, TypeScript, Next.js, Ruby on Rails, React-Native et Node.js, je transforme vos projets en solutions performantes et innovantes.',
+			'Développeur fullstack freelance à Toulouse, spécialisé en React, Vue, Node.js, Next.js, je vous accompagne dans la réalisation de votre projet web ou mobile, de la conception à la mise en ligne.',
 		url: 'https://www.pierrefournier.dev',
 		type: 'website',
 		locale: 'fr_FR',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 				url: 'https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/n0crqaaearqdbsafq3jp',
 				width: 1200,
 				height: 630,
-				alt: 'Pierre Fournier - Développeur front-end freelance à Toulouse',
+				alt: 'Pierre Fournier - Développeur fullstack freelance à Toulouse',
 			},
 		],
 	},
