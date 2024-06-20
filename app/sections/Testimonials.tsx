@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import peoplevoxicon from '@/public/companies/peoplevox.svg'
 import loungeupicon from '@/public/companies/loungeup.svg'
+import w2pdigitalicon from '@/public/companies/w2pdigital.svg'
 import { useIsMobile } from '@/hooks'
 
 export function Testimonials() {
@@ -104,4 +105,11 @@ const testimonials: Array<CarousselItemProps> = [
 		name: 'Lionel Tressens',
 		job: 'CTO - Lounge Up',
 	},
+  {
+    src: w2pdigitalicon,
+    alt: 'W2P Digital',
+    text: `« Pour une cette mission avec Pierre tout s'est bien passé : - Qualité des échanges - Respect des délais - Qualité du livrable final. Je recommande ! »`,
+    name: 'Hugo Carrière',
+    job: 'Chef de projet - W2P Digital',
+  },
 ]
