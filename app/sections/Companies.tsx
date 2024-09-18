@@ -20,21 +20,21 @@ export function Companies() {
 				<h3 className='text-lg text-gray-500'>{texts[1]}</h3>
 			</div>
 			<div className='flex flex-wrap gap-10 lg:gap-20'>
-				<CompanyIcon src={loungeup} alt='LoungeUp' />
-				<CompanyIcon src={peoplevox} alt='PeopleVox' />
-				<CompanyIcon src={feel} alt='Feel' width={100} />
-				<CompanyIcon src={w2p} alt='W2P Digital' />
-				<CompanyIcon src={edtake} alt='Edtake' width={180} />
-				<CompanyIcon src={henritrip} alt='Henri Trip' />
-				<CompanyIcon src={safary} alt='Safary' />
-				<CompanyIcon src={grandlitier} alt='Grand Litier' />
-				<CompanyIcon src={grandsespaces} alt='Grand Espaces' width={180} />
+				<CompanyIcon src={grandlitier} alt='Logo Grand Litier' />
+				<CompanyIcon src={grandsespaces} alt='Logo Grand Espaces' width={180} />
+				<CompanyIcon src={peoplevox} alt='Logo People Vox' />
+				<CompanyIcon src={loungeup} alt='Logo LoungeUp' />
+				<CompanyIcon src={w2p} alt='Logo W2P Digital' />
+				<CompanyIcon src={feel} alt='Logo Feel app' width={100} />
+				<CompanyIcon src={edtake} alt='Logo edtake' width={180} />
+				<CompanyIcon src={safary} alt='Logo Safary club' />
+				<CompanyIcon src={henritrip} alt='Logo Henri Trip' />
 			</div>
 		</div>
 	)
 }
 
-const texts = ["Ils m'ont fait confiance", 'Vous êtes entre de bonnes mains']
+const texts = ["Ils m'ont fait confiance", "Les entreprises avec lesquelles j'ai collaboré"]
 
 function CompanyIcon({
 	src,

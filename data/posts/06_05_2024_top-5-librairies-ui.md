@@ -21,7 +21,7 @@ keywords:
     'Best UI libraries',
     'Bibliothèques UI',
   ]
-tags: ['React', 'UI', 'Frontend']
+tags: ['React', 'UI', 'Frontend', 'Javascript']
 image: 'https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/blog/librairies%20ui/jzorrtj1hchi7zsy7hzk'
 alt: 'Les 5 meilleures librairies UI avec React'
 author: 'Pierre Fournier'

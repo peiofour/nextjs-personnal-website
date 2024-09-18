@@ -12,15 +12,17 @@ export function Stack() {
 					<div className='flex grow flex-col gap-4 px-10 text-lg'>
 						<div className='flex-1'>
 							<h3 className='font-semibold text-primary'>Framework :</h3>
-							<p>React, Vue, Next.js, React-Native, Ionic</p>
+							<p>React, Vue.js, Next.js, React-Native, Ionic</p>
 						</div>
 						<div className='flex-1'>
 							<h3 className='font-semibold text-primary'>Testing :</h3>
 							<p>Cypress, Jest, React Testing Library</p>
 						</div>
 						<div className='flex-1'>
-							<h3 className='font-semibold text-primary'>Style :</h3>
-							<p>CSS3, Tailwind CSS, Sass, styled-components</p>
+							<h3 className='font-semibold text-primary'>UX/UI :</h3>
+							<p>
+                Figma, Tailwind CSS, Chakra UI, Material UI, Ant Design, Shadcn/ui, Styled Components, Bootstrap
+              </p>
 						</div>
 					</div>
 				</div>

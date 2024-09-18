@@ -18,7 +18,7 @@ keywords:
     'React 19 resource loading',
     'React 19 compiler',
   ]
-tags: ['React', 'UI', 'Frontend']
+tags: ['React', 'UI', 'Frontend', 'Javascript']
 image: 'https://res.cloudinary.com/pierrefournier-dev/image/upload/f_auto,q_auto/v1/blog/tnheoai3tgiygi2ep7pb'
 alt: 'Les nouvelles fonctionnalités dans React 19'
 author: 'Pierre Fournier'
