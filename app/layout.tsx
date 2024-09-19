@@ -78,7 +78,7 @@ export default function RootLayout({
 				<Providers>
 					<div className='flex min-h-screen flex-col'>
 						<Header />
-						<main className='flex-1'>
+						<main className='flex-1 py-5 lg:py-10'>
 							<Suspense fallback={<Loading />}>{children}</Suspense>
 						</main>
 						<Footer />

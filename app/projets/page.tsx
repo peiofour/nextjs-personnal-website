@@ -49,7 +49,7 @@ export default function Page() {
 	const projects: IProjectCard[] = data.projects
 
 	return (
-		<div className='container pb-10 pt-5'>
+		<div className='container'>
 			<h1 className='pb-3 text-3xl font-bold'>Projets</h1>
 			<h2 className='max-w-xl pb-10 text-lg text-gray-500'>
 				Les projets sur lesquels j&apos;ai travaillé, mes contributions

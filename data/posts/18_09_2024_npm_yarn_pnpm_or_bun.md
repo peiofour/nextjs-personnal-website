@@ -26,10 +26,6 @@ author: 'Pierre Fournier'
 type: 'Post'
 ---
 
-Dans l'univers du développement JavaScript, les gestionnaires de paquets sont des outils essentiels pour gérer les dépendances d’un projet. NPM, Yarn, PNPM et Bun sont parmi les plus populaires aujourd'hui. Cet article compare ces gestionnaires en fonction de leurs avantages et des types de projets pour lesquels ils sont les plus adaptés.
-
----
-
 ## 1. **NPM (Node Package Manager)**
 
 ### Présentation

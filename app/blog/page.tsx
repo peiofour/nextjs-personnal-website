@@ -58,7 +58,7 @@ export default function Page() {
   const sortedPosts = allPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
-    <div className='container pb-10 pt-5'>
+    <div className='container'>
       <h1 className='pb-3 text-3xl font-bold'>Blog</h1>
       <h2 className='max-w-xl pb-10 text-lg text-gray-500'>
         Des articles sur le développement web, le design et la tech.
@@ -114,7 +114,7 @@ export default function Page() {
                   <div className='flex gap-3'>
                     {post.tags.map((tag) => (
                       <Chip color='secondary' key={tag}>
-                        {tag}
+                        #{tag}
                       </Chip>
                     ))}
                   </div>

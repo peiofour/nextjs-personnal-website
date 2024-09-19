@@ -30,7 +30,7 @@ export function Head() {
 	const isMobile = useIsMobile()
 
 	return (
-		<div className='container flex flex-col items-center justify-between py-20 lg:p-24'>
+		<div className='container flex flex-col items-center justify-between pb-20 lg:pb-24'>
 			<div className='container space-y-6 text-center lg:max-w-4xl'>
 				<h1 className='text-3xl font-bold lg:text-5xl lg:leading-[72px]'>
 					<span className='text-primary'>Pierre</span>, développeur fullstack

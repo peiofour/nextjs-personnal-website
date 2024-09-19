@@ -1,6 +1,6 @@
 import { allPosts } from '@/.contentlayer/generated'
 import type { Post } from '@/.contentlayer/generated'
-import { Image } from '@nextui-org/react'
+import { Chip, Image } from '@nextui-org/react'
 import NextImage from 'next/image'
 
 export async function generateMetadata({
@@ -53,33 +53,44 @@ export default async function Page({ params }: { params: { slug: string } }) {
 	const post = allPosts.find((p) => p.slug === slug) as Post
 
 	return (
-		<div className='max-w-5xl pb-10 md:container md:mt-20'>
-			<Image
-				as={NextImage}
-				src={post.image}
-				alt={post.alt}
-				width={1200}
-				height={630}
-				className='mb-2 w-full rounded-none md:rounded-lg'
-			/>
-			<em className='px-3 text-gray-500 md:px-0'>{post.alt}</em>
-			<p className=' mt-10 px-3 pb-3 text-gray-500 md:px-0'>
-				{new Date(post.date).toLocaleDateString('fr-FR', {
-					year: 'numeric',
-					month: 'long',
-					day: 'numeric',
-				})}
-			</p>
-			<h1 className='mb-5 px-3 text-2xl font-bold md:px-0 lg:text-4xl'>
-				{post.title}
-			</h1>
-			<p className='px-3 text-medium leading-relaxed md:px-0 lg:text-lg'>
-				{post.description}
-			</p>
+		<article>
+			<div className='flex max-w-5xl flex-col gap-5 md:container'>
+				<Image
+					as={NextImage}
+					src={post.image}
+					alt={post.alt}
+					width={1200}
+					height={630}
+					className='w-full rounded-none md:rounded-lg'
+				/>
 
-			<article className='prose prose-gray max-w-5xl lg:prose-lg prose-headings:px-3 prose-p:px-3 prose-em:text-medium prose-em:text-gray-500 prose-img:-ml-3 prose-img:mb-2 prose-img:w-svw prose-img:max-w-7xl md:prose-headings:px-0 md:prose-p:px-0 md:prose-img:max-w-[750px] md:prose-img:rounded-lg prose-code:wh'>
-				<div dangerouslySetInnerHTML={{ __html: post.body.html }} />
-			</article>
-		</div>
+				<div className='flex flex-col gap-3 px-3 md:px-0'>
+					<div className='flex flex-wrap gap-3'>
+						{post.tags.map((tag) => (
+							<Chip color='secondary' key={tag}>
+								#{tag}
+							</Chip>
+						))}
+					</div>
+					<p className='text-gray-500'>
+						Posté le{' '}
+						{new Date(post.date).toLocaleDateString('fr-FR', {
+							year: 'numeric',
+							month: 'long',
+							day: 'numeric',
+						})}{' '}
+						par {post.author}
+					</p>
+					<h1 className='text-2xl font-bold lg:text-4xl'>{post.title}</h1>
+					<p className='text-medium leading-relaxed lg:text-lg'>
+						{post.description}
+					</p>
+				</div>
+
+				<div className='prose-code:wh prose prose-gray max-w-5xl lg:prose-lg prose-headings:px-3 prose-p:px-3 prose-em:text-medium prose-em:text-gray-500 prose-img:-ml-3 prose-img:mb-2 prose-img:w-svw prose-img:max-w-7xl md:prose-headings:px-0 md:prose-p:px-0 md:prose-img:max-w-[750px] md:prose-img:rounded-lg'>
+					<div dangerouslySetInnerHTML={{ __html: post.body.html }} />
+				</div>
+			</div>
+		</article>
 	)
 }
