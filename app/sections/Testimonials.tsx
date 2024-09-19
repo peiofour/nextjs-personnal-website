@@ -19,7 +19,7 @@ export function Testimonials() {
 				</div>
 				<div className='overflow-hidden'>
 					<div
-						className={`flex w-[${testimonialsLength * 100}%] transition-all duration-500 ease-in-out`}
+						className='flex w-[300%] transition-all duration-500 ease-in-out'
 						style={{
 							transform: `translateX(-${(caroussel * 100) / testimonialsLength}%)`,
 						}}
