@@ -7,7 +7,7 @@ export function Projects() {
 	const projects: IProjectCard[] = data.projects.slice(-3) // Keep only the last 3 projects
 
 	return (
-		<div className='container flex flex-col gap-10 py-14'>
+		<section className='container flex flex-col gap-10 py-14'>
 			<div className='mx-auto max-w-3xl text-center'>
 				<h2 className='pb-3 text-3xl font-bold'>
 					{"Les projets sur lesquels j'ai travaillé"}
@@ -30,6 +30,6 @@ export function Projects() {
 					</Button>
 				</Link>
 			</div>
-		</div>
+		</section>
 	)
 }

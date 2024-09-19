@@ -5,13 +5,14 @@ import undraw from '@/public/undraw_feeling_proud.svg'
 
 export function About() {
 	return (
-		<>
+		<section>
 			<Image
 				src={undraw}
 				alt="Illustration d'un homme fier"
 				width={500}
 				height={500}
 				className='mx-auto -mb-32 px-10 lg:px-0'
+        loading='eager'
 			/>
 			<div className='bg-primary py-32'>
 				<div className='container flex max-w-4xl flex-col gap-5 text-center text-white'>
@@ -27,7 +28,7 @@ export function About() {
 						Discutons de votre projet
 					</h3>
 					<div>
-						<Link href='/contact'>
+						<Link href='mailto:hello@pierrefournier.dev'>
 							<Button color='secondary' size='lg'>
 								Me contacter
 							</Button>
@@ -35,7 +36,7 @@ export function About() {
 					</div>
 				</div>
 			</div>
-		</>
+		</section>
 	)
 }
 

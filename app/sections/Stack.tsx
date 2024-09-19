@@ -2,7 +2,7 @@ import { FaCode, FaServer, FaCloud } from 'react-icons/fa6'
 
 export function Stack() {
 	return (
-		<div className='container -mt-16 mb-10 px-3'>
+		<section className='container -mt-16 mb-10 px-3'>
 			<div className='mx-auto flex max-w-xl flex-col divide-y divide-stroke rounded-xl bg-white text-center shadow-card lg:max-w-none lg:flex-row lg:divide-x lg:divide-y-0'>
 				<div className='flex flex-1 flex-col gap-8 py-10 '>
 					<span className='mx-auto flex size-20 items-center rounded-full bg-secondary text-white'>
@@ -70,6 +70,6 @@ export function Stack() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }

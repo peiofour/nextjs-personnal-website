@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
-import React from 'react'
 import { Footer, Header } from '@/app/components'
 import '@/styles/globals.css'
-import { Suspense } from 'react'
+import { Suspense, ReactNode } from 'react'
 import Loading from './loading'
 import { Analytics } from '@vercel/analytics/react'
 import { Providers } from './providers'
@@ -71,18 +70,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{ children: ReactNode }>) {
 	return (
 		<html lang='fr'>
 			<body className={poppins.className}>
 				<Providers>
-					<div className='flex min-h-screen flex-col'>
-						<Header />
-						<main className='flex-1 py-5 lg:py-10'>
-							<Suspense fallback={<Loading />}>{children}</Suspense>
-						</main>
-						<Footer />
-					</div>
+					<Header />
+					<Suspense fallback={<Loading />}>
+						<main className='min-h-screen py-5 lg:py-10'>
+              {children}
+            </main>
+					</Suspense>
+					<Footer />
 				</Providers>
 				<Analytics />
 			</body>

@@ -1,7 +1,6 @@
-import React from 'react'
 import '@/styles/loading.css' // Import the CSS file for the loading animation
 
-const Loading: React.FC = () => {
+export function Loading() {
 	return (
 		<div className='flex h-96 items-center justify-center gap-4'>
 			<div className='loading-circle'></div>

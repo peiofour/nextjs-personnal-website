@@ -4,11 +4,12 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import peoplevoxicon from '@/public/companies/peoplevox.svg'
 import loungeupicon from '@/public/companies/loungeup.svg'
-import w2pdigitalicon from '@/public/companies/w2pdigital.svg'
+import supercoloricon from '@/public/companies/supercolor.svg'
 import { useIsMobile } from '@/hooks'
 
 export function Testimonials() {
 	const [caroussel, setCaroussel] = useState(0)
+	const testimonialsLength = testimonials.length
 
 	return (
 		<div className='bg-tertiary py-14'>
@@ -18,8 +19,10 @@ export function Testimonials() {
 				</div>
 				<div className='overflow-hidden'>
 					<div
-						className='flex w-[200%] transition-all duration-500 ease-in-out'
-						style={{ transform: `translateX(-${caroussel * 50}%)` }}
+						className={`flex w-[${testimonialsLength * 100}%] transition-all duration-500 ease-in-out`}
+						style={{
+							transform: `translateX(-${(caroussel * 100) / testimonialsLength}%)`,
+						}}
 					>
 						{testimonials.map((testimonial, index) => (
 							<CarousselItem
@@ -35,13 +38,13 @@ export function Testimonials() {
 				</div>
 				<div className='flex justify-center gap-4'>
 					{testimonials.map((_, index) => (
-						<button
+						<div
 							key={index}
 							onClick={() => setCaroussel(index)}
-							className={`h-4 w-4 rounded-full ${
+							className={`h-4 w-4 cursor-pointer rounded-full ${
 								caroussel === index ? 'bg-secondary' : 'border-2 bg-white'
 							}`}
-						></button>
+						></div>
 					))}
 				</div>
 			</div>
@@ -85,6 +88,14 @@ function CarousselItem(testimonial: CarousselItemProps) {
 }
 
 const testimonials: Array<CarousselItemProps> = [
+	{
+		src: supercoloricon,
+		alt: 'Supercolor.cool',
+		text: `« Nous collaborons très régulièrement avec Pierre. Agile et réactif, il fait preuve d'une adaptabilité au top et complète notre équipe technique en toute transparence et efficacité.
+Je le recommande ! 👍 »`,
+		name: 'Etienne Dumas',
+		job: 'CEO - Agence Supercolor',
+	},
 	{
 		src: peoplevoxicon,
 		alt: 'People Vox',

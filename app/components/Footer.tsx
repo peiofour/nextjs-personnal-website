@@ -14,9 +14,10 @@ export function Footer() {
 				</div>
 				<div className='mx-auto flex gap-3'>
 					<Link
-						href={'mailto:contact@pierrefournier.dev'}
+						href={'mailto:hello@pierrefournier.dev'}
 						target='_blank'
 						rel='noreferrer'
+            aria-label='Email'
 					>
 						<MdEmail
 							className='text-white transition-colors duration-300 hover:text-secondary'
@@ -27,6 +28,7 @@ export function Footer() {
 						href='https://www.linkedin.com/in/pierrefournier1/'
 						target='_blank'
 						rel='noreferrer'
+            aria-label='LinkedIn'
 					>
 						<FaLinkedinIn
 							className='text-white transition-colors duration-300 hover:text-secondary'
@@ -38,6 +40,7 @@ export function Footer() {
 						href='https://www.github.com/peiofour'
 						target='_blank'
 						rel='noreferrer'
+            aria-label='GitHub'
 					>
 						<FaGithub
 							className='text-white transition-colors duration-300 hover:text-secondary'

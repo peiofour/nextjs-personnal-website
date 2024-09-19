@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import loungeup from '@/public/companies/loungeup.svg'
 import peoplevox from '@/public/companies/peoplevox.svg'
-import w2p from '@/public/companies/w2pdigital.svg'
+import supercolor from '@/public/companies/supercolor.svg'
 import edtake from '@/public/companies/edtake.svg'
 import feel from '@/public/companies/feel.svg'
 import henritrip from '@/public/companies/henritrip.svg'
@@ -14,23 +14,22 @@ import { useIsMobile } from '@/hooks'
 
 export function Companies() {
 	return (
-		<div className='container flex flex-col gap-10 pb-20 pt-10'>
+		<section className='container flex flex-col gap-10 pb-20 pt-10'>
 			<div className='flex flex-col gap-3 text-center'>
 				<h2 className='text-2xl font-bold lg:text-3xl'>{texts[0]}</h2>
 				<h3 className='text-lg text-gray-500'>{texts[1]}</h3>
 			</div>
 			<div className='flex flex-wrap gap-10 lg:gap-20'>
-				<CompanyIcon src={grandlitier} alt='Logo Grand Litier' />
-				<CompanyIcon src={grandsespaces} alt='Logo Grand Espaces' width={180} />
 				<CompanyIcon src={peoplevox} alt='Logo People Vox' />
 				<CompanyIcon src={loungeup} alt='Logo LoungeUp' />
-				<CompanyIcon src={w2p} alt='Logo W2P Digital' />
-				<CompanyIcon src={feel} alt='Logo Feel app' width={100} />
-				<CompanyIcon src={edtake} alt='Logo edtake' width={180} />
-				<CompanyIcon src={safary} alt='Logo Safary club' />
+				<CompanyIcon src={supercolor} alt='Logo Supercolor' />
 				<CompanyIcon src={henritrip} alt='Logo Henri Trip' />
+				<CompanyIcon src={grandlitier} alt='Logo Grand Litier' />
+				<CompanyIcon src={grandsespaces} alt='Logo Grand Espaces' width={180} />
+				<CompanyIcon src={feel} alt='Logo Feel app' width={100} />
+				<CompanyIcon src={safary} alt='Logo Safary club' />
 			</div>
-		</div>
+		</section>
 	)
 }
 
