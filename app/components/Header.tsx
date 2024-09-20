@@ -18,7 +18,11 @@ export function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	return (
 		<header className='sticky top-0 z-50'>
-			<Navbar maxWidth='2xl'>
+			<Navbar
+				maxWidth='2xl'
+				isMenuOpen={isMenuOpen}
+				onMenuOpenChange={setIsMenuOpen}
+			>
 				<NavbarBrand>
 					<Link href='/'>
 						<Logo variant='primary' />
@@ -64,23 +68,32 @@ export function Header() {
 				<NavbarMenuToggle
 					aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
 					className='sm:hidden'
-					onClick={() => setIsMenuOpen(!isMenuOpen)}
 				/>
 				<NavbarMenu>
 					<NavbarMenuItem>
-						<Link href='/projets'>Projets</Link>
+						<Link href='/projets' onClick={() => setIsMenuOpen(false)}>
+							Projets
+						</Link>
 					</NavbarMenuItem>
 					<NavbarMenuItem>
-						<Link href='/blog'>Blog</Link>
+						<Link href='/blog' onClick={() => setIsMenuOpen(false)}>
+							Blog
+						</Link>
 					</NavbarMenuItem>
 					<NavbarMenuItem>
-						<Link href='/contact'>Contact</Link>
+						<Link
+							href='mailto:hello@pierrefournier.dev'
+							onClick={() => setIsMenuOpen(false)}
+						>
+							Contact
+						</Link>
 					</NavbarMenuItem>
 					<NavbarMenuItem>
 						<Link
 							href='https://www.linkedin.com/in/pierrefournier1/'
 							target='_blank'
 							rel='noreferrer'
+							onClick={() => setIsMenuOpen(false)}
 						>
 							<FaLinkedinIn
 								className='transition-colors duration-300 hover:text-secondary'
@@ -93,6 +106,7 @@ export function Header() {
 							href='https://www.github.com/peiofour'
 							target='_blank'
 							rel='noreferrer'
+							onClick={() => setIsMenuOpen(false)}
 						>
 							<FaGithub
 								className='transition-colors duration-300 hover:text-secondary'
